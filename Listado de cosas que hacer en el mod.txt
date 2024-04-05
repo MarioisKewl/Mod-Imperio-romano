@@ -1,0 +1,6 @@
+﻿--	Continuar con el arbol de enfoques de Rusia, Sacro Imperio, e Imperio Romano.
+--	Modificar el arbol de tecnologías con nuevo equipamientos y nuevas tecnologías
+--	# Cambiar el año de incio
+--	Crear Imperios de Oriente (Unificar China.)
+--	# Arreglar las tropas de Kistofo Empire
+--	# Arreglar el líder de Imperio Bizantino

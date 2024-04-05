@@ -1,0 +1,39 @@
+add_namespace = britania
+
+country_event = {
+	id = britania.1
+	title = britania.1.t
+	desc = britania.1.d
+	picture = GFX_report_event_soviet_tanks_snow
+	
+	is_triggered_only = yes
+	
+	option = { # Accept demands
+		name = britania.1.a
+		ai_chance = { 
+		factor = 25
+		modifier = { # Don't accept if in a faction that can protect them
+				factor = 0
+				OR = {
+					is_in_faction_with = ITA
+				}
+			}
+		}
+		ITA = {
+			country_event = { days = 5 id = rome.5 }
+		}
+	}
+	option = { # Refuse
+		name = britania.1.b
+		ai_chance = { factor = 75 }
+		ITA = {
+			country_event = { days = 5 id = rome.6 }
+			effect_tooltip = {
+				create_wargoal = {
+					type = annex_everything
+					target = ENG
+				}
+			}
+		}
+	}
+}

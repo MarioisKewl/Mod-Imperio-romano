@@ -1,0 +1,123 @@
+add_namespace = machaguay
+
+#Negociaciones con los incas
+
+country_event = {
+	id = machaguay.1
+	title = machaguay.1.t
+	desc = machaguay.1.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = machaguay.1.a
+        PRU = { country_event = { id = machaguay.2 } }
+		}
+
+	option = {
+		name = machaguay.1.b
+			}	
+	}
+
+#Incas reciben la negociacion
+
+country_event = {
+	id = machaguay.2
+	title = machaguay.2.t
+	desc = machaguay.2.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = machaguay.2.a
+    MAC = { country_event = { hours = 6 id = machaguay.3 } }
+		}
+   
+	option = {
+		name = machaguay.2.b
+    MAC = { country_event = { hours = 6 id = machaguay.4 } }
+    }
+        
+    option = {
+		name = machaguay.2.c
+    MAC = { country_event = { hours = 6 id = machaguay.5 } }
+		}
+    }
+
+#Incas aceptan alianza  
+
+country_event = {
+	id = machaguay.3
+	title = machaguay.3.t
+	desc = machaguay.3.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = machaguay.3.a
+        create_faction = Entente_Machaguay-Incas
+        add_to_faction = PRU
+        PRU = {
+					add_ai_strategy = {
+						type = alliance
+						id = "MAC"
+						value = 200
+					}
+				}      
+		}
+	}	
+
+#Incas aceptan un pacto de no agresion
+
+country_event = {
+	id = machaguay.4
+	title = machaguay.4.t
+	desc = machaguay.4.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = machaguay.4.a
+        diplomatic_relation = { country = PRU relation = non_aggression_pact }
+		}
+	}
+
+#Incas rechazan algun pacto
+
+country_event = {
+	id = machaguay.5
+	title = machaguay.5.t
+	desc = machaguay.5.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = machaguay.5.a
+		add_relation_modifier = { target = PRU modifier = Rechazo_alianza }
+
+		}
+	}
+
+#Gran Guerra Sudamericana				
+
+country_event = {
+	id = machaguay.6
+	title = machaguay.6.t
+	desc = machaguay.6.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = machaguay.6.a
+        declare_war_on = { target = ARG type = annex_everything }
+        declare_war_on = { target = BRA type = annex_everything }  
+        add_ideas = Espiritu_Machaguay
+        
+		}
+	}

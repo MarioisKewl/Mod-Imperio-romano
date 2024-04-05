@@ -1,0 +1,128 @@
+add_namespace = rome
+
+#Spain accept demands
+
+country_event = {
+	id = rome.1
+	title = rome.1.t
+	desc = rome.1.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = rome.1.a
+			annex_country = { target = SPR }
+		hidden_effect = {
+			ITA = {
+				country_event = { days = 1 id = news.332 }
+			}
+		}
+	}
+}
+
+#Spain reffuse demands
+country_event = {
+	id = rome.2
+	title = rome.2.t
+	desc = rome.2.d
+	picture = GFX_report_event_soviet_tanks_snow
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = rome.2.a
+		create_wargoal = {
+			type = take_state
+			target = SPR
+			generator = { 28 }
+		}				
+		hidden_effect = {
+			ITA = {
+				country_event = { days = 1 id = news.331 }				
+			}
+		}
+	}
+}
+country_event = {
+	id = rome.3
+	title = rome.3.t
+	desc = rome.3.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = rome.3.a
+			annex_country = { target = GER }
+		hidden_effect = {
+			ITA = {
+				country_event = { days = 1 id = news.333 }
+			}
+		}
+	}
+}
+
+#Sacro reffuse demands
+country_event = {
+	id = rome.4
+	title = rome.4.t
+	desc = rome.4.d
+	picture = GFX_report_event_soviet_tanks_snow
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = rome.4.a
+		create_wargoal = {
+			type = annex_everything
+			target = GER
+		}				
+		hidden_effect = {
+			ITA = {
+				country_event = { days = 1 id = news.334 }				
+			}
+		}
+	}
+}
+country_event = {
+	id = rome.5
+	title = rome.5.t
+	desc = rome.5.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = rome.5.a
+			annex_country = { target = ENG }
+		hidden_effect = {
+			ITA = {
+				country_event = { days = 1 id = news.335 }
+			}
+		}
+	}
+}
+
+#ENG reffuse demands
+country_event = {
+	id = rome.6
+	title = rome.6.t
+	desc = rome.6.d
+	picture = GFX_report_event_soviet_tanks_snow
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = rome.6.a
+		create_wargoal = {
+			type = annex_everything
+			target = ENG
+		}				
+		hidden_effect = {
+			ITA = {
+				country_event = { days = 1 id = news.336 }				
+			}
+		}
+	}
+}

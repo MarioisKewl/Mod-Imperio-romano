@@ -1,0 +1,136 @@
+add_namespace = unidos
+
+country_event = {
+	id = unidos.1
+	title = unidos.1.t
+	desc = unidos.1.desc
+	picture = GFX_report_event_generic_battle
+
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			every_owned_state = {
+				limit = {
+					OR { state = 371 state = 372 state = 373 
+state = 374 state = 375 state = 376 state = 377 state = 378 state = 379 state = 380
+state = 381 state = 382 state = 383 state = 384 state = 385 state = 386 
+state = 387 state = 388 state = 389 state = 390 state = 391 state = 392 }
+				}
+				USB = {
+					add_state_core = PREV
+					transfer_state = PREV
+				} }
+			every_owned_state = {
+				limit = {
+					OR { state = 366 state = 367 state = 370 
+state = 365 state = 364 state = 363 state = 368 state = 362 state = 369 state = 816
+state = 361 state = 393 state = 394 state = 395 state = 396 state = 261 
+state = 360 state = 359 state = 358 state = 357 }
+				}
+				USB = {
+					add_state_core = PREV
+				} }
+transfer_units_fraction = {
+						target = USB
+						size = 0.5 # Fallback in case one of the ratios below are not stipulated
+						stockpile_ratio = 0.5
+						army_ratio = 0
+						navy_ratio = 0
+						air_ratio = 0
+						keep_unit_leaders = {
+						    
+						}
+					}
+set_party_name = {
+	ideology = democratic
+	name = USB_democratic_party
+}
+set_party_name = {
+	ideology = neutrality
+	name = USB_neutrality_party
+}
+            add_popularity = {
+    ideology = neutrality
+    popularity = 0.1
+}  
+every_owned_state = {
+				limit = {
+					OR { state = 685 }
+				}
+				PAN = {
+					transfer_state = PREV
+				} }
+set_autonomy = {
+    target = PHI
+    autonomy_state = autonomy_free
+    end_wars = yes
+    end_civil_wars = yes
+}
+add_ideas = {
+	limited_conscription
+	partial_economic_mobilisation
+        SPA_death_before_surrender
+}
+remove_ideas = { great_depression }
+} 
+}
+     
+	option = {
+		name = unidos.1.a 
+        USA = {
+			country_event = { days = 30 id = unidos.2 }
+		}
+ }
+
+	option = {
+		name = unidos.1.b
+		USB = { change_tag_from = USA }
+		USA = {
+			country_event = { days = 30 id = unidos.2 }
+		}
+}
+ }
+
+country_event = {
+	id = unidos.2
+	title = unidos.2.t
+	desc = unidos.2.desc
+	picture = GFX_report_event_generic_battle
+
+	is_triggered_only = yes
+
+	option = {
+		name = unidos.2.a 
+
+add_ideas = {
+	war_economy }
+USB = { add_ideas = { war_economy } }
+declare_war_on = {
+    target = USB
+    type = civil_war
+}
+}
+}
+
+country_event = {
+	id = unidos.3
+	title = unidos.3.t
+	desc = unidos.3.desc
+	picture = GFX_report_event_generic_battle
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		tag = USA
+		361 = { is_controlled_by = USB }
+		361 = { is_owned_by = USA }
+		USB = { has_war_with = USA }
+	}
+
+	option = {
+		name = unidos.3.a 
+	kill_country_leader
+	add_stability = -0.2
+	add_war_support = -0.2
+}
+}

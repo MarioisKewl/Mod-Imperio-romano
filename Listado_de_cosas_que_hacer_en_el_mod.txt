@@ -1,0 +1,6 @@
+﻿--	Continuar con el arbol de enfoques de Rusia, Sacro Imperio, e Imperio Romano.
+--	Modificar el arbol de tecnologías con nuevo equipamientos y nuevas tecnologías
+--	# Cambiar el año de inicio
+--	Crear Imperios de Oriente (Unificar China.)
+--	Agregar más papados
+-- 	Arreglar a Julio César y agregar más Mariscales y Generales para el Imperio Romano

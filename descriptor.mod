@@ -1,0 +1,16 @@
+name="IMperioproxd"
+path="mod/romanromanus/"
+tags={
+	"Alternative History"
+	"Events"
+	"National Focuses"
+}
+replace_path="music"
+replace_path="gfx/loadingscreens"
+replace_path="common/bookmarks"
+replace_path="common/characters"
+replace_path="common/defines"
+replace_path="common/national_focus"
+replace_path="history/states"
+replace_path="history/countries"
+supported_version="1.12.*"

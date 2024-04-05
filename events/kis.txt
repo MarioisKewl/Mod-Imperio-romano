@@ -1,0 +1,420 @@
+focus_tree = {
+	id = KIS_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = KIS
+		}
+	}
+	
+	default = no
+
+	focus = {
+		id = constitucion_sama
+		icon = GFX_goal_generic_national_unity
+		available = {
+		has_government = fascism
+		}
+		x = 1.5
+		y = 0
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		
+		completion_reward = {
+	create_wargoal = {
+				type = take_state_focus
+				target = HUN
+				generator = { 644 637 562 } # Eastern Siberia, Kamchatka
+			}
+			create_wargoal = {
+				type = take_state_focus
+				target = TUR
+				generator = { 644 637 562 } # Eastern Siberia, Kamchatka
+			}
+			create_wargoal = {
+				type = take_state_focus
+				target = ROM
+				generator = { 644 637 562 } # Eastern Siberia, Kamchatka
+			}
+			create_wargoal = {
+				type = take_state_focus
+				target = BUL
+				generator = { 644 637 562 } # Eastern Siberia, Kamchatka
+			}
+	}
+}
+
+	focus = {
+		id = radical
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = constitucion_sama}
+		mutually_exclusive = { focus = BIG_ALLIES }
+		available = {
+		}
+		x = 2
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		
+		completion_reward = {	
+	set_rule = { can_create_factions = yes }
+	ENG = { add_opinion_modifier = { target = KIS modifier = anti_capitalist_diplomacy_capitalists } }
+	FRA = { add_opinion_modifier = { target = KIS modifier = anti_capitalist_diplomacy_capitalists } }
+	create_faction = "Kisto's Unidos"
+	add_to_faction = KIS
+	}
+	
+}
+    focus = {
+		id = gre_titere
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = radical }
+		mutually_exclusive = {}
+		available = {
+		}
+		x = 2
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		
+		completion_reward = {	
+	create_wargoal = {
+	type = puppet_wargoal_focus
+	target = GRE
+	}
+	}
+	}
+	focus = {
+		id = ita_take
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = gre_titere }
+		mutually_exclusive = {}
+		available = {
+		}
+		x = 2
+		y = 4
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		
+		completion_reward = {	
+	create_wargoal = {
+	type = take_state_focus
+	target = ITA
+	generator = { 689 690 693 308 691 692 696 } # Carribean Islands
+	}
+	}
+	}
+	focus = {
+		id = BIG_ALLIES
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = constitucion_sama }
+		mutually_exclusive = { focus = radical }
+		available = {
+		NOT = {is_in_faction_with = ENG}
+		GER = {
+		has_war = yes 
+		}
+		}
+		x = 0
+		y = 1
+		cost = 12
+		ai_will_do = {
+			factor = 12
+		}
+		
+		completion_reward = {	
+    ITA = { add_opinion_modifier = { target = KIS modifier = anti_fascist_diplomacy_fascists} }
+	GER = { add_opinion_modifier = { target = KIS modifier = anti_fascist_diplomacy_fascists} }
+	
+	puppet = AST
+	
+	create_faction = Big_Allies
+	add_to_faction = KIS
+	add_to_faction = ENG
+	add_to_faction = FRA
+	add_to_faction = AST
+	add_to_faction = CAN
+	add_to_faction = NZL
+	add_to_faction = SAF
+		}
+	}
+	focus = {
+		id = mejor_infanteria
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = constitucion_sama }
+		available = {
+		}
+		x = 1
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		
+		completion_reward = {
+		add_tech_bonus = {
+				name = infantry_weapons_bonus
+				bonus = 0.8
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+	}
+	#Nueva Rama - NAVAL
+	focus = {
+		id = mejor_naval
+		icon = GFX_goal_generic_construct_naval_dockyard
+		available = {
+		}
+		x = 5
+		y = 0
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		
+		completion_reward = {
+		navy_experience = 50
+			if = {
+				limit = {
+					NOT = {
+						any_owned_state = {
+							dockyard > 0
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+					}
+					any_owned_state = {
+						is_coastal = yes
+					}
+				}
+				random_owned_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 10
+					add_building_construction = {
+						type = dockyard
+						level = 10
+						instant_build = yes
+					}
+				}
+				set_country_flag = naval_effort_built
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = naval_effort_built }
+					any_owned_state = {
+						dockyard > 0
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+				}
+				random_owned_state = {
+					limit = {
+						dockyard > 0
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 10
+					add_building_construction = {
+						type = dockyard
+						level = 10
+						instant_build = yes
+					}
+				}
+				set_country_flag = naval_effort_built
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = naval_effort_built }
+					NOT = {
+						any_owned_state = {
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+					}
+				}
+				random_state = {
+					limit = {
+						controller = { tag = ROOT }
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 10
+					add_building_construction = {
+						type = dockyard
+						level = 10
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = sama_naval
+		icon = GFX_goal_generic_build_navy
+		prerequisite = { focus = mejor_naval }
+		available = {
+		}
+		x = 5
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		
+		completion_reward = {
+		add_tech_bonus = {
+				name = sub_op_bonus
+				bonus = 0.7
+				uses = 2
+				technology = convoy_interdiction_ti
+				technology = unrestricted_submarine_warfare
+				technology = wolfpacks
+				technology = advanced_submarine_warfare
+				technology = combined_operations_raiding
+				category = fleet_in_being_tree
+			}
+		}
+	}
+#Cambios Políticos
+focus = {
+	id = cambio_politico
+	icon = GFX_goal_generic_propaganda
+	available ={ NOT {has_government = democratic}
+	NOT {has_government = communism}} 
+	x = 10
+	y = 0
+	cost = 10
+	ai_will_do = {
+	factor = 12
+	}
+	
+	completion_reward = {
+ }
+ }
+ 
+focus = {
+	id = democratico
+	icon = GFX_goal_generic_propaganda
+	prerequisite = { focus = cambio_politico }
+	mutually_exclusive = { focus = comunismo }
+	available ={ NOT {has_government = democratic} } 
+	x = 9
+	y = 1
+	cost = 10
+	ai_will_do = {
+	factor = 12
+	}
+	
+	completion_reward = {
+	add_ideas = great_depression
+	add_ideas = democratic_influence
+	add_ideas = liberty_ethos_focus
+ }
+ }
+	
+	focus = {
+	id = desarmado
+	icon = GFX_goal_generic_propaganda
+	prerequisite = { focus =  democratico } 
+	x = 9
+	y = 2
+	cost = 10
+	ai_will_do = {
+	factor = 12
+	}
+	
+	completion_reward = {
+	add_ideas = generic_democratic_reformer
+	add_ideas = disarmed_nation
+}
+	}
+	focus = {
+	id = comunismo
+	icon = GFX_goal_generic_propaganda
+	prerequisite = { focus =  cambio_politico	}
+    mutually_exclusive = { focus = democratico }	
+	x = 11
+	y = 1
+	cost = 10
+	ai_will_do = {
+	factor = 12
+	}
+	
+	completion_reward = {
+	add_ideas = communist_pressure
+}
+	}
+	focus = {
+	id = titere_urss
+	icon = GFX_goal_generic_propaganda
+	prerequisite = { focus =  comunismo	} 
+	mutually_exclusive = { focus = alianza_urrs }
+	x = 11
+	y = 2
+	cost = 10
+	ai_will_do = {
+	factor = 12
+	}
+	
+	completion_reward = {
+	create_wargoal = {
+	type = puppet_wargoal_focus
+	target = SOV
+	}
+}
+	}
+	focus = {
+	id = alianza_urrs
+	icon = GFX_goal_generic_propaganda
+	prerequisite = { focus =  comunismo	} 
+	mutually_exclusive = { focus = titere_urss }
+	x = 13
+	y = 2
+	cost = 10
+	ai_will_do = {
+	factor = 12
+	}
+	
+	completion_reward = {
+	create_faction = the_comintern
+	add_to_faction = KIS
+	add_to_faction = SOV
+	}
+}
+	}
+}

@@ -1,0 +1,547 @@
+add_namespace = brazil
+
+#Politica Brasileña
+
+country_event = {
+    id = brazil.1
+    title = brazil.1.t
+    desc = brazil.1.d
+    picture = GFX_report_event_soviet_tanks_snow
+
+    is_triggered_only = yes
+
+    option = { # Sales se vuelve presidente
+    name = brazil.1.a
+    ai_chance = { factor = 50 }
+    
+    custom_effect_tooltip = 1_BRA_tt
+    set_country_flag = Sales_BRA
+    hidden_effect = { add_popularity = { ideology = democratic popularity = 0.4 } }
+    hidden_effect = { set_politics = { ruling_party = democratic elections_allowed = yes } }
+    hidden_effect = { swap_ideas = { add_idea = Oposicion_reacc remove_idea = Oposicion_democra } }              
+    }    
+
+    option = { # Vargas se queda
+    name = brazil.1.b
+    ai_chance = { factor = 50 }
+    
+    custom_effect_tooltip = 2_BRA_tt
+    set_country_flag = Vargas_BRA
+    hidden_effect = { add_popularity = { ideology = monarchist popularity = 0.1 } }
+    }
+
+    option = { # Yrion toma el poder
+    name = brazil.1.c
+    ai_chance = { factor = 0 }
+    
+    custom_effect_tooltip = 3_BRA_tt  
+    custom_effect_tooltip = 4_BRA_tt
+    set_country_flag = Yrioon_BRA
+    hidden_effect = { add_popularity = { ideology = teocracia popularity = 1 } }
+    hidden_effect = { set_politics = { ruling_party = teocracia } }
+    hidden_effect = { swap_ideas = { add_idea = Oposicion_reacc remove_idea = Oposicion_evang } }
+        }
+    }	
+
+#Reclamar las Amazonas venezolanas
+
+country_event = {
+	id = brazil.2
+	title = brazil.2.t
+	desc = brazil.2.d
+	picture = GFX_report_event_soviet_tanks_snow
+	
+	is_triggered_only = yes
+	
+	option = { # Aceptar (Lo que haran los inteligentes)
+		name = brazil.2.a
+		ai_chance = { 
+		factor = 100
+		modifier = { # Don't accept if in a faction that can protect them
+
+			}
+		}
+		BRA = {
+			country_event = { days = 1 id = brazil.3 }
+		}
+	}
+	option = { # Rechazar (Mala idea)
+		name = brazil.2.b
+		ai_chance = { factor = 0 }
+			BRA = {
+			country_event = { days = 1 id = brazil.4 }
+		}
+	}
+}
+
+#Venezuela entrega Bolivar y Guyana
+
+country_event = {
+	id = brazil.3
+	title = brazil.3.t
+	desc = brazil.3.d
+	picture = GFX_report_event_soviet_tanks_snow
+	
+	is_triggered_only = yes
+	
+	option = { # Aceptar
+		name = brazil.3.a
+    BRA = { set_state_owner = 488 
+            set_state_controller = 488
+            set_state_owner = 687 
+            set_state_controller = 687 }
+	}
+  }	
+
+ #Venezuela se niega a entregar Bolivar
+
+ country_event = {
+	id = brazil.4
+	title = brazil.4.t
+	desc = brazil.4.d
+	picture = GFX_report_event_soviet_tanks_snow
+	
+	is_triggered_only = yes
+	
+	option = { # Declarar la guerra
+		name = brazil.4.a
+    BRA = { declare_war_on = {
+    target = VEN
+    type = take_core_state
+      } }
+	}
+
+	option = { # Conseguir un war goal
+		name = brazil.3.b
+    BRA = { create_wargoal = {
+    type = take_core_state
+    target = VEN
+      } }
+	}
+  }	
+
+  #Reclamar las Amazonas colombianas
+
+country_event = {
+	id = brazil.5
+	title = brazil.5.t
+	desc = brazil.5.d
+	picture = GFX_report_event_soviet_tanks_snow
+	
+	is_triggered_only = yes
+	
+	option = { # Aceptar (Lo que haran los inteligentes)
+		name = brazil.5.a
+		ai_chance = { 
+		factor = 100
+		modifier = { # Don't accept if in a faction that can protect them
+
+			}
+		}
+		BRA = {
+			country_event = { days = 1 id = brazil.6 }
+		}
+	}
+	option = { # Rechazar (Mala idea)
+		name = brazil.5.b
+		ai_chance = { factor = 0 }
+			BRA = {
+			country_event = { days = 1 id = brazil.7 }
+		}
+	}
+}
+
+#Colombia entrega Meta
+
+country_event = {
+	id = brazil.6
+	title = brazil.6.t
+	desc = brazil.6.d
+	picture = GFX_report_event_soviet_tanks_snow
+	
+	is_triggered_only = yes
+	
+	option = { # Aceptar
+		name = brazil.6.a
+    BRA = { set_state_owner = 486 
+            set_state_controller = 486 }
+	}
+  }	
+
+  #Colombia se niega a entregar Meta
+
+ country_event = {
+	id = brazil.7
+	title = brazil.7.t
+	desc = brazil.7.d
+	picture = GFX_report_event_soviet_tanks_snow
+	
+	is_triggered_only = yes
+	
+	option = { # Declarar la guerra
+		name = brazil.7.a
+    BRA = { declare_war_on = {
+    target = COL
+    type = take_core_state
+      } }
+	}
+
+	option = { # Conseguir un war goal
+		name = brazil.7.b
+    BRA = { create_wargoal = {
+    type = take_core_state
+    target = COL
+      } }
+	}
+  }
+
+    #Brasil quiere una alianza
+
+ country_event = {
+	id = brazil.8
+	title = brazil.8.t
+	desc = brazil.8.d
+	picture = GFX_report_event_soviet_tanks_snow
+	
+	is_triggered_only = yes
+	
+	option = { # Aceptar
+		name = brazil.8.a
+		ai_chance = { factor = 100 }
+      BRA = {
+			country_event = { days = 1 id = brazil.9 }
+		}
+	}
+
+	option = { # Rechazar
+		name = brazil.8.b
+		ai_chance = { factor = 0 }
+      BRA = {
+			country_event = { days = 1 id = brazil.10 }
+		}
+	}
+  }
+
+    
+    #Argentina acepta
+
+ country_event = {
+	id = brazil.9
+	title = brazil.9.t
+	desc = brazil.9.d
+	picture = GFX_report_event_soviet_tanks_snow
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = brazil.9.a
+		create_faction = Pacto1
+		BRA = { add_to_faction = ARG }
+	}
+	}
+    
+    #Argentina no acepta
+
+ country_event = {
+	id = brazil.10
+	title = brazil.10.t
+	desc = brazil.10.d
+	picture = GFX_report_event_soviet_tanks_snow
+	
+	is_triggered_only = yes
+	
+	option = { # Aceptar
+		name = brazil.10.a
+ 
+  add_opinion_modifier = {
+    target = ARG
+    modifier = Rechazo_alianza
+}
+	}}
+    
+    #Brasil exige nuestra subyugacion
+
+ country_event = {
+	id = brazil.11
+	title = brazil.11.t
+	desc = brazil.11.d
+	picture = GFX_report_event_soviet_tanks_snow
+	
+	is_triggered_only = yes
+	
+	option = { # Aceptar (Lo que hara la IA)
+		name = brazil.11.a
+		ai_chance = { 
+		factor = 100
+		modifier = { # Don't accept if in a faction that can protect them
+
+			}
+		}
+		BRA = {
+			country_event = { days = 1 id = brazil.12 }
+		}
+		custom_effect_tooltip = GAME_OVER_TT
+	}
+	option = { # Rechazar 
+		name = brazil.11.b
+		ai_chance = { factor = 0 }
+			BRA = {
+			country_event = { days = 1 id = brazil.13 }
+		}
+	} }
+    
+    #Bolivia acepta
+
+	country_event = {
+	id = brazil.12
+	title = brazil.12.t
+	desc = brazil.12.d
+	picture = GFX_report_event_soviet_tanks_snow
+	
+	is_triggered_only = yes
+	
+		option = { # Aceptar
+		name = brazil.12.a
+    annex_country = { target = BOL }
+	      } } }
+
+    #Bolivia no acepta
+
+	country_event = {
+	id = brazil.13
+	title = brazil.13.t
+	desc = brazil.13.d
+	picture = GFX_report_event_soviet_tanks_snow
+	
+	is_triggered_only = yes
+	
+	option = { # Declarar la guerra
+		name = brazil.13.a
+    BRA = { declare_war_on = {
+    target = BOL
+    type = take_core_state
+      } }
+	}
+
+	option = { # Conseguir un war goal
+		name = brazil.13.b
+    BRA = { create_wargoal = {
+    type = take_core_state
+    target = BOL
+      } }
+	} }
+
+	#Brasil nos ofrece "seguridad"
+
+ country_event = {
+	id = brazil.14
+	title = brazil.14.t
+	desc = brazil.14.d
+	picture = GFX_report_event_soviet_tanks_snow
+	
+	is_triggered_only = yes
+	
+	option = { # Aceptar (Lo que hara la IA)
+		name = brazil.14.a
+		ai_chance = { 
+		factor = 75 
+			modifier = {
+				threat > 20
+				factor = 2
+			}
+			modifier = {
+				is_in_faction = no
+				factor = 2
+			}
+			}
+		BRA = {
+			country_event = { days = 1 id = brazil.15 }
+		}
+		custom_effect_tooltip = GAME_OVER_TT
+	}
+	option = { # Rechazar 
+		name = brazil.14.b
+		ai_chance = { factor = 25 }
+			BRA = {
+			country_event = { days = 1 id = brazil.16 }
+		}
+	} }
+
+	#Paraguay acepta
+
+	country_event = {
+	id = brazil.15
+	title = brazil.15.t
+	desc = brazil.15.d
+	picture = GFX_report_event_soviet_tanks_snow
+	
+	is_triggered_only = yes
+	
+		option = { # Aceptar
+		name = brazil.15.a
+    annex_country = { target = PAR }
+	      } } }
+
+	 #Paraguay no acepta
+
+	country_event = {
+	id = brazil.16
+	title = brazil.16.t
+	desc = brazil.16.d
+	picture = GFX_report_event_soviet_tanks_snow
+	
+	is_triggered_only = yes
+	
+	option = { # Declarar la guerra
+		name = brazil.16.a
+    BRA = { declare_war_on = {
+    target = PAR
+    type = take_core_state
+      } }
+	}
+
+	option = { # Conseguir un war goal
+		name = brazil.16.b
+    BRA = { create_wargoal = {
+    type = take_core_state
+    target = PAR
+      } }
+	} }      
+
+	#Reclamar Surinam
+
+ country_event = {
+	id = brazil.17
+	title = brazil.17.t
+	desc = brazil.17.d
+	picture = GFX_report_event_soviet_tanks_snow
+	
+	is_triggered_only = yes
+	
+	option = { # Aceptar 
+		name = brazil.17.a
+		ai_chance = { 
+		factor = 100
+			}
+		BRA = {
+			country_event = { days = 1 id = brazil.18 }
+		}
+	}
+	option = { # Rechazar 
+		name = brazil.17.b
+		ai_chance = { factor = 0 }
+			BRA = {
+			country_event = { days = 1 id = brazil.19 }
+		}
+	} }
+
+	#Paises Bajos entrega Surinam
+
+	country_event = {
+	id = brazil.18
+	title = brazil.18.t
+	desc = brazil.18.d
+	picture = GFX_report_event_soviet_tanks_snow
+	
+	is_triggered_only = yes
+	
+		option = { # Aceptar
+		name = brazil.18.a
+    BRA = { set_state_owner = 309 
+            set_state_controller = 309 }
+	      } } }
+
+	 #Paises Bajos se niega a entregar Surinam
+
+	country_event = {
+	id = brazil.19
+	title = brazil.19.t
+	desc = brazil.19.d
+	picture = GFX_report_event_soviet_tanks_snow
+	
+	is_triggered_only = yes
+	
+	option = { # Declarar la guerra
+		name = brazil.19.a
+    BRA = { declare_war_on = {
+    target = HOL
+    type = take_core_state
+      } }
+	}
+
+	option = { # Conseguir un war goal
+		name = brazil.19.b
+    BRA = { create_wargoal = {
+    type = take_core_state
+    target = HOL
+      } }
+	} }      
+
+	#Reclamar Guyana Francesa
+
+ country_event = {
+	id = brazil.20
+	title = brazil.20.t
+	desc = brazil.20.d
+	picture = GFX_report_event_soviet_tanks_snow
+	
+	is_triggered_only = yes
+	
+	option = { # Aceptar 
+		name = brazil.20.a
+		ai_chance = { 
+		factor = 100
+			}
+		BRA = {
+			country_event = { days = 1 id = brazil.21 }
+		}
+	}
+	option = { # Rechazar 
+		name = brazil.20.b
+		ai_chance = { factor = 0 }
+			BRA = {
+			country_event = { days = 1 id = brazil.22 }
+		}
+	} }
+
+	#Francia entrega Guyana Francesa
+
+	country_event = {
+	id = brazil.21
+	title = brazil.21.t
+	desc = brazil.21.d
+	picture = GFX_report_event_soviet_tanks_snow
+	
+	is_triggered_only = yes
+	
+		option = { # Aceptar
+		name = brazil.21.a
+    BRA = { set_state_owner = 310
+            set_state_controller = 310 }
+	      } } }
+
+	 #Francia se niega a entregar Guyana Francesa
+
+	country_event = {
+	id = brazil.22
+	title = brazil.22.t
+	desc = brazil.22.d
+	picture = GFX_report_event_soviet_tanks_snow
+	
+	is_triggered_only = yes
+	
+	option = { # Declarar la guerra
+		name = brazil.22.a
+    BRA = { declare_war_on = {
+    target = FRA
+    type = take_core_state
+      } }
+	}
+
+	option = { # Conseguir un war goal
+		name = brazil.22.b
+    BRA = { create_wargoal = {
+    type = take_core_state
+    target = FRA
+      } }
+	} }      
