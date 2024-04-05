@@ -1,0 +1,196 @@
+music_station = "base_music"
+
+music = {
+	song = "maintheme"
+	chance = {
+		modifier = {
+			factor = 2
+
+                        TAG = MAY
+		}		
+	}
+}
+
+# PEACE SONGS ##################
+# WAR SONGS ####################
+
+music = {
+	song = "extra_1"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+                        TAG = USA
+			has_war = yes
+		}		
+	}	
+}
+
+music = {
+	song = "extra_2"
+	
+	chance = {
+		modifier = {
+			factor = 2
+
+                        TAG = SPR
+		}		
+	}	
+}
+
+music = {
+	song = "extra_3"
+	
+	chance = {
+		modifier = {
+			factor = 2
+
+                        TAG = CHL
+		}		
+	}	
+}
+
+music = {
+	song = "extra_4"
+	
+	chance = {
+		modifier = {
+			factor = 1
+
+                        TAG = SPR
+		}		
+	}	
+}
+
+music = {
+	song = "extra_5"
+	
+	chance = {
+		modifier = {
+			factor = 2
+
+                        TAG = BRA
+		}		
+	}	
+}
+
+music = {
+	song = "extra_6"
+	
+	chance = {
+		modifier = {
+			factor = 2
+
+                        TAG = BRA
+		}		
+	}	
+}
+
+music = {
+	song = "extra_7"
+	
+	chance = {
+		modifier = {
+			factor = 4
+
+                        TAG = JAP
+		}		
+	}	
+}
+
+music = {
+	song = "extra_8"
+	
+	chance = {
+		modifier = {
+			factor = 2
+
+                        TAG = SPR
+		}		
+	}	
+}
+
+music = {
+	song = "extra_9"
+	
+	chance = {
+		modifier = {
+			factor = 2
+
+                        TAG = ENG
+		}		
+	}	
+}
+
+music = {
+	song = "extra_10"
+	
+	chance = {
+		modifier = {
+			factor = 4
+
+                        TAG = USA
+		}		
+	}	
+}
+
+music = {
+	song = "extra_11"
+	
+	chance = {
+		modifier = {
+			factor = 2
+
+                        TAG = ENG
+		}		
+	}	
+}
+
+music = {
+	song = "extra_12"
+	
+	chance = {
+		modifier = {
+			factor = 4
+
+                        TAG = USA
+		}		
+	}	
+}
+
+music = {
+	song = "extra_14"
+	
+	chance = {
+		modifier = {
+			factor = 4
+
+                        TAG = USA
+		}		
+	}	
+}
+
+music = {
+	song = "extra_13"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+                        TAG = MEX
+		}		
+	}	
+}
+
+music = {
+	song = "extra_15"
+	
+	chance = {
+		modifier = {
+			factor = 3
+
+                        TAG = MEX
+		}		
+	}	
+}

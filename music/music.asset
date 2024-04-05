@@ -1,0 +1,107 @@
+
+# MAIN THEME
+music = {
+	name = "maintheme"
+	file = "Machaguay.ogg"
+	volume = 1
+}
+
+music = {
+	name = "main_vanilla"
+	file = "hoi4mainthemeallies.ogg"
+	volume = 0.65
+}
+
+# General Peace:
+
+# Extra:
+
+music = {
+    name = "extra_1"
+	file = "Johnny.ogg"
+	volume = 0.85
+}	
+
+music = {
+	name = "extra_2"
+	file = "Marcha_Real_(1915).ogg"
+	volume = 0.9
+}
+
+music = {
+	name = "extra_3"
+    file = "Himno.ogg"
+    volume = 0.65	
+}
+
+music = {
+	name = "extra_4"
+    file = "Continentes.ogg"
+    volume = 0.65	
+}
+
+music = {
+	name = "extra_5"
+    file = "Nintendos.ogg"
+    volume = 0.65	
+}
+
+music = {
+	name = "extra_6"
+    file = "Pokimons.ogg"
+    volume = 0.65	
+}
+
+music = {
+	name = "extra_7"
+    file = "Wah.ogg"
+    volume = 0.65	
+}
+
+music = {
+	name = "extra_8"
+    file = "Volando.ogg"
+    volume = 0.65	
+}
+
+music = {
+	name = "extra_9"
+    file = "King.ogg"
+    volume = 0.65	
+}
+
+music = {
+	name = "extra_10"
+    file = "Jean.ogg"
+    volume = 0.65	
+}
+
+music = {
+	name = "extra_11"
+    file = "Smooth.ogg"
+    volume = 0.65	
+}
+
+music = {
+	name = "extra_12"
+    file = "Wall.ogg"
+    volume = 0.65	
+}
+
+music = {
+	name = "extra_14"
+    file = "Thriller.ogg"
+    volume = 0.6	
+}
+
+music = {
+	name = "extra_13"
+    file = "Vecindad.ogg"
+    volume = 0.8	
+}
+
+music = {
+	name = "extra_15"
+    file = "Chapulin.ogg"
+    volume = 0.8	
+}
