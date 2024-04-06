@@ -1,0 +1,18 @@
+focus_tree = {
+	id = placeholder_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			OR = {
+				tag = PRU
+                                tag = JAP
+				tag = LUX
+                                tag = VAT
+			}
+		}
+	}
+	
+	default = no

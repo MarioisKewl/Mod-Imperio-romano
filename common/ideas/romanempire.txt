@@ -1,0 +1,164 @@
+ideas = {
+
+	country = {
+        Adriano = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = imperialismo
+
+			removal_cost = -1
+			
+			modifier = {
+				planning_speed = 0.99
+			}
+		}
+		 catholicism = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = catholicism
+
+			removal_cost = -1
+			
+			modifier = {
+				planning_speed = 0.2
+			}
+		}
+
+		republic_focus = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = imagendemocraticapro
+
+			removal_cost = -1
+			
+			modifier = {
+				democratic_drift = 0.10
+			}
+		}
+		bajo_ocio = {
+		allowed = {
+			always = no
+		}
+		allowed_civil_war = {
+			always = yes
+		}
+
+		picture = imagendemocraticapro
+
+		removal_cost = -3
+
+		modifier = {
+			stability_factor = -0.2
+			war_support_factor = -0.4
+			production_factory_efficiency_gain_factor = -0.4
+		}
+		}
+		normal_ocio = {
+		allowed = {
+			always = no
+		}
+		allowed_civil_war = {
+			always = yes
+		}
+		picture = imagendemocraticapro
+
+		removal_cost = -2
+
+		modifier = {
+
+			stability_factor = 0
+			war_support_factor = -0.3
+			production_factory_efficiency_gain_factor = 0.2
+		}
+		}
+		alto_ocio = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = imagendemocraticapro
+
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.2
+				war_support_factor = 0.2
+				production_factory_efficiency_gain_factor = 0.5
+
+			}
+
+		}
+		ocio_alto_rendimiento = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = imagendemocraticapro
+
+			removal_cost = -1
+
+			modifier = {
+			production_factory_efficiency_gain_factor = -0.8
+			}
+		}
+		ocio_normal_rendimiento = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = imagendemocraticapro
+
+			removal_cost = -1
+
+			modifier = {
+			production_factory_efficiency_gain_factor = -0.5
+			}
+		}
+		ocio_bajo_rendimiento = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = imagendemocraticapro
+
+			removal_cost = -1
+
+			modifier = {
+			production_factory_efficiency_gain_factor = 0.7
+			}
+		}
+    }
+}

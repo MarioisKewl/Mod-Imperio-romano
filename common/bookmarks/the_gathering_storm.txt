@@ -1,0 +1,130 @@
+	bookmarks = {
+	bookmark = {
+		name = "THE_OPEN_NAME"
+		desc = "THE_OPEN_DESC"
+		date = 1936.1.1.12
+		picture = "GFX_select_date_1936"
+		default_country = "ITA"
+		default = yes
+		
+		"KIS"={
+		history = "KIS_THE_OPEN_DESC"
+		ideology = fascism
+		ideas = {
+		new_deal
+	    general_staff
+	    kis_god
+		}
+		}
+		"SOV"={
+		history = "SOV_THE_OPEN_DESC"
+		ideology = fascism
+		ideas = {
+		new_deal
+	    general_staff
+	    kis_god
+		}
+		}
+		"ITA"={
+		history = "ITA_THE_OPEN"
+		ideology = fascism
+		ideas = {
+		Adriano
+		}
+		}
+		"GER"={
+		history = "GER_THE_OPEN"
+		ideology = fascism
+		ideas = {
+		Barbarroja
+		}
+		}
+		"TUR"={
+		history = "TUR_THE_OPEN_DESC"
+		ideology = fascism
+		ideas = {
+		new_deal
+	    general_staff
+		}
+		}
+		"CHI"={
+		history = "CHI_THE_OPEN_DESC"
+		ideology = fascism
+		ideas = {
+		new_deal
+	    general_staff
+		}
+		}
+		"USA"={
+		history = "USA_THE_OPEN_DESC"
+		ideology = neutrality
+		ideas = {
+		new_deal
+	    general_staff
+		}
+		}
+		"---"={
+			history = "OTHER_THE_OPEN_DESC"
+		}
+        "PRU"={
+			minor = yes
+			history = "CZE_GATHERING_STORM_DESC"
+			ideology = fascism
+			ideas = {
+			}
+		}
+        "BRA"={
+			minor = yes
+			history = "CZE_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+			}
+		}
+        "MEX"={
+			minor = yes
+			history = "POL_THEOPEN"
+			ideology = fascism
+			ideas = {
+			}
+		}
+        "ENG"={
+			minor = yes
+			history = "CZE_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+			}
+		}
+        "FRA"={
+			minor = yes
+			history = "CZE_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+			}
+		}
+        "SPR"={
+			minor = yes
+			history = "CZE_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+			}
+		}
+		"LUX"={
+			minor = yes
+			history = "CZE_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+			}
+		}
+        "JAP"={
+			minor = yes
+			history = "CZE_GATHERING_STORM_DESC"
+			ideology = fascism
+			ideas = {
+			}
+		}
+		effect = {
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+		}
+	}
+  }

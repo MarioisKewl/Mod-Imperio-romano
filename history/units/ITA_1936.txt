@@ -1,0 +1,1240 @@
+﻿division_template = {
+	name = "Division d'Infanterie"		
+	# Represents: Division d'Infanterie (Series A and B), Div. d'Inf. Coloniale, 
+	#	Div. d'Inf. Nord-Africaine, Div. d'Inf. de Forteresse
+	# Difference is their equipment
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 } 	# Heavy Arty Regiment had 2x 155mm battalions
+	}
+}
+division_template = {
+	name = "Division d'Infanterie Motorisée"	# Division d'Infanterie Motorisée
+
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+		motorized = { x = 2 y = 0 }
+		motorized = { x = 2 y = 1 }
+		motorized = { x = 2 y = 2 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }      # Recon Group consisted of 26 ACs + motorcycles
+		artillery = { x = 0 y = 1 }  # Heavy Arty Regiment had 1x 155mm, 1x 105mm battalions
+	}
+}
+division_template = {
+	name = "Division d'Infanterie Alpine"	# Division d'Infanterie Alpine
+	# Note: trimmed to 3x Rgts w/ arty bn added, 1939
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }	# Regular mountain infantry (Infanterie Alpine)
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }	
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 1 y = 2 }
+		mountaineers = { x = 2 y = 0 }	# Chasseurs Alpins (HOI3 elites)
+		mountaineers = { x = 2 y = 1 }	# Chasseurs Alpins (HOI3 elites)
+		mountaineers = { x = 2 y = 2 }	# Chasseurs Alpins (HOI3 elites)
+		mountaineers = { x = 3 y = 0 }	# Chasseurs Alpins (HOI3 elites)
+		mountaineers = { x = 3 y = 1 }	# Chasseurs Alpins (HOI3 elites)
+		mountaineers = { x = 3 y = 2 }	# Chasseurs Alpins (HOI3 elites)
+	}
+}
+division_template = {
+	name = "Division de Cavalerie" 	# Division de Cavalerie
+	# Note: Transformed to DLC, DLM divisions, 1936-39 
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }      # Recon Group consisted of 64 ACs/scout cars
+	}
+}
+division_template = {
+	name = "Division Légère Mécanique" 		# Division Légère Mécanique
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }		# Bn. of Hotchkiss, then Souma (Med.) tanks
+		light_armor = { x = 0 y = 1 }		# Bn. of Hotchkiss tanks
+		motorized = { x = 1 y = 0 }			# Brigade of 2x Rgts., 2 Bns. each (later 1 Rgt. of 3x Bns.)
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+		motorized = { x = 1 y = 3 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }      # Recon Group consisted of 42 ACs + motorcycles
+	}
+}
+division_template = {
+	name = "Brigade de Chars de Combat" 	# Brigade de Chars de Combat, independent armor brigades of 2x Rgts., 2 Bns. each
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		light_armor = { x = 1 y = 0 }
+		light_armor = { x = 1 y = 1 }
+	}
+}
+division_template = {
+	name = "Brigade Coloniale"			# Represents: 2xRgt colonial forces and , usually with old equipment
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	priority = 0
+}
+division_template = {
+	name = "Divisione di Fanteria"		
+	# Represents nearly all infantry divisions
+	# In later years, CCNN Brigade added to Inf Division (1x2 militia/inf regiment)
+	# Also represent semi-mountain divisions (1st, 2nd, 3rd, 4th, 6th Divisions)
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 0 y = 4 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 1 y = 3 }
+		infantry = { x = 1 y = 4 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+		infantry = { x = 2 y = 3 }
+		infantry = { x = 2 y = 4 }
+		light_armor = { x = 3 y = 0 }
+		light_armor = { x = 3 y = 1 }
+		light_armor = { x = 3 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 } 
+	}
+}
+division_template = {
+	name = "Divisione di Fanteria"					# Divisione di Fanteria
+	regiments = {
+		mountaineers = { x = 0 y = 0 }			# Elite Alpina Regiments
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }	
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 1 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Divisione Celere" 		# Divisione Celere (Fast Division)
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		motorized = { x = 2 y = 0 }		# (elite) Bersaglieri Regiment
+		motorized = { x = 2 y = 1 }
+		light_armor = { x = 3 y = 0 }	# L3/35 Tankette Battaltion
+	}
+	priority = 2
+}
+division_template = {
+	name = "Raggruppamento Celere" 			# Raggruppamento Celere
+	# Note: these groups were gradually expanded to army-level supprt of cavalry rgts, bersaglieri rgts, and tankette bns.
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+}
+
+
+##### OOB #####
+units = {
+division= {	
+		name = "42ème Division d'Infanterie"
+		location = 11502
+		division_template = "Division d'Infanterie" 	# Frontline, best equipment
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "2ème Div. d'Inf. Nord-Africaine"
+		location = 5291
+		division_template = "Division d'Infanterie" 	# Second line, reserve equipment
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division= {	
+		name = "3ème Brigade de Chars de Combat"
+		location = 11502
+		division_template = "Brigade de Chars de Combat" 		# FT-17s
+		start_experience_factor = 0.2
+		force_equipment_variants = { gw_tank_equipment = { owner = "FRA" } }
+	}
+
+	# Xe Corps d'Armée (Région Militaire in 1936) -- Strassbourg
+	division= {	
+		name = "20ème Division d'Infanterie"
+		location = 9503
+		division_template = "Division d'Infanterie" 	# Second line, reserve equipment
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division= {	
+		name = "43ème Division d'Infanterie"
+		location = 6529
+		division_template = "Division d'Infanterie" 	# Frontline, best equipment
+		start_experience_factor = 0.3
+	}
+
+	# XXe Corps d'Armée (Région Militaire in 1936) -- Nancy
+	division= {	
+		name = "2ème Division d'Infanterie"
+		location = 3629
+		division_template = "Division d'Infanterie" 	# Second line, reserve equipment
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division= {	
+		name = "11ème Division d'Infanterie"
+		location = 549
+		division_template = "Division d'Infanterie" 	# Frontline, best equipment
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "4ème Div. d'Inf. Nord-Africaine"
+		location = 549
+		division_template = "Division d'Infanterie" 	# Second line, reserve equipment
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division= {	
+		name = "2ème Division de Cavalerie"
+		location = 11516
+		division_template = "Division de Cavalerie" 	
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division= {	
+		name = "2ème Brigade de Chars de Combat"
+		location = 11516
+		division_template = "Brigade de Chars de Combat" 		# FT-17s
+		start_experience_factor = 0.2
+		force_equipment_variants = { gw_tank_equipment = { owner = "FRA" } }
+	}
+
+	# Ie Corps d'Armée (Région Militaire in 1936) -- Lille
+	division= {	
+		name = "1ère Div. d'Infanterie Motorisée"
+		location = 11483
+		division_template = "Division d'Infanterie Motorisée" 	# All motorized are frontline, best equipment
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "7ème Division d'Infanterie"
+		location = 575
+		division_template = "Division d'Infanterie" 	# Second line, reserve equipment
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+
+	# IIe Corps d'Armée (Région Militaire in 1936) -- Amiens
+	division= {	
+		name = "3ème Div. d'Infanterie Motorisée"
+		location = 454
+		division_template = "Division d'Infanterie Motorisée" 	# All motorized are frontline, best equipment
+		start_experience_factor = 0.3
+	}
+
+	# IIIe Corps d'Armée (Région Militaire in 1936) -- Rouen
+	division= {	
+		name = "5ème Div. d'Infanterie Motorisée"
+		location = 11563
+		division_template = "Division d'Infanterie Motorisée" 	# All motorized are frontline, best equipment
+		start_experience_factor = 0.3
+	}
+
+	# XIIe Corps d'Armée (Région Militaire in 1936) -- Reims
+	division= {	
+		name = "12ème Div. d'Infanterie Motorisée"
+		location = 9472
+		division_template = "Division d'Infanterie Motorisée" 	# All motorized are frontline, best equipment
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "1ère Division Légère Mécanique"
+		location = 13011
+		division_template = "Division Légère Mécanique" 	# DLM is frontline, best equipment, L Arm = H-35
+		start_experience_factor = 0.3
+		force_equipment_variants = { light_tank_equipment_1 = { owner = "FRA" } }
+	}
+
+	# IVe Corps d'Armée (Région Militaire in 1936) -- Le Mans
+	division= {	
+		name = "19ème Division d'Infanterie"
+		location = 3509
+		division_template = "Division d'Infanterie" 	# Frontline, best equipment
+		start_experience_factor = 0.3
+	}
+
+	# Ve Corps d'Armée (Région Militaire in 1936) -- Orleans
+	division= {	
+		name = "9ème Div. d'Infanterie Motorisée"
+		location = 3509
+		division_template = "Division d'Infanterie Motorisée" 	# All motorized are frontline, best equipment
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "1ère Division de Cavalerie"
+		location = 3509
+		division_template = "Division de Cavalerie" 	
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+
+	# IXe Corps d'Armée (Région Militaire in 1936) -- Tours
+	division= {	
+		name = "23ème Division d'Infanterie"
+		location = 3671
+		division_template = "Division d'Infanterie" 	# Frontline, best equipment
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "3ème Div. d'Inf. Nord-Africaine"
+		location = 3671
+		division_template = "Division d'Infanterie" 	# Second line, reserve equipment
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+
+	# XIe Corps d'Armée (Région Militaire in 1936) -- Nantes
+	division= {	
+		name = "16ème Division d'Infanterie"
+		location = 3552
+		division_template = "Division d'Infanterie" 	# Second line, reserve equipment
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division= {	
+		name = "21ème Division d'Infanterie"
+		location = 6536
+		division_template = "Division d'Infanterie" 	# Frontline, best equipment
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "5ème Brigade de Chars de Combat"
+		location = 11465
+		division_template = "Brigade de Chars de Combat" 		# R-35s
+		start_experience_factor = 0.2
+		force_equipment_variants = { light_tank_equipment_1 = { owner = "FRA" } }
+	}
+
+	# Région Militaire de Paris -- Paris
+	division= {	
+		name = "16ème Division d'Infanterie"
+		location = 11506
+		division_template = "Division d'Infanterie" 	# Second line, reserve equipment
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division= {	
+		name = "3ème Division de Cavalerie"
+		location = 11506
+		division_template = "Division de Cavalerie" 	
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division= {	
+		name = "5ème Division de Cavalerie"
+		location = 11506
+		division_template = "Division de Cavalerie" 	
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division= {	
+		name = "4ème Brigade de Chars de Combat"
+		location = 11506
+		division_template = "Brigade de Chars de Combat" 		# R-35s
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+		force_equipment_variants = { light_tank_equipment_1 = { owner = "FRA" } }
+	}
+
+	# VIIe Corps d'Armée (Région Militaire in 1936) -- Besançon
+	division= {	
+		name = "6ème Division d'Infanterie"
+		location = 678
+		division_template = "Division d'Infanterie" 	# Second line, reserve equipment
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division= {	
+		name = "13ème Division d'Infanterie"
+		location = 678
+		division_template = "Division d'Infanterie" 	# Frontline, best equipment
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "14ème Division d'Infanterie"
+		location = 9642
+		division_template = "Division d'Infanterie" 	# Frontline, best equipment
+		start_experience_factor = 0.3
+	}
+
+	# VIIIe Corps d'Armée (Région Militaire in 1936) -- Dijon
+	division= {	
+		name = "15ème Div. d'Infanterie Motorisée"
+		location = 3652
+		division_template = "Division d'Infanterie Motorisée" 	# All motorized are frontline, best equipment
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "24ème Division d'Infanterie"
+		location = 3652
+		division_template = "Division d'Infanterie" 	# Second line, reserve equipment
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+
+	# Maginot Line -- Divisions d'Forteresse
+	division= {	
+		name = "Longuyon Div. d'Inf. de Forteresse"
+		location = 5291
+		division_template = "Brigade Coloniale" 	# Garrison unit, reserve equipment
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+	division= {	
+		name = "Metz Div. d'Inf. de Forteresse"
+		location = 11502
+		division_template = "Brigade Coloniale" 	# Garrison unit, reserve equipment
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+	division= {	
+		name = "Sarreguimines Div. d'Inf. de Forteresse"
+		location = 3629
+		division_template = "Brigade Coloniale" 	# Garrison unit, reserve equipment
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+	division= {	
+		name = "Strassbourg Div. d'Inf. de Forteresse"
+		location = 9503
+		division_template = "Brigade Coloniale" 	# Garrison unit, reserve equipment
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+	division= {	
+		name = "Mulhouse Div. d'Inf. de Forteresse"
+		location = 678
+		division_template = "Brigade Coloniale" 	# Garrison unit, reserve equipment
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+
+	### Southern France Region
+	# XIIIe Corps d'Armée (Région Militaire in 1936) -- Clermont-Ferrand
+	division= {	
+		name = "4ème Division d'Infanterie"
+		location = 11576
+		division_template = "Division d'Infanterie" 	# Second line, reserve equipment
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division= {	
+		name = "18ème Division d'Infanterie"
+		location = 11576
+		division_template = "Division d'Infanterie" 	# Second line, reserve equipment
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division= {	
+		name = "25ème Div. d'Infanterie Motorisée"
+		location = 11576
+		division_template = "Division d'Infanterie Motorisée" 	# All motorized are frontline, best equipment
+		start_experience_factor = 0.3
+	}
+
+	# XVIIe Corps d'Armée (Région Militaire in 1936) -- Toulouse
+	division= {	
+		name = "22ème Division d'Infanterie"
+		location = 6766
+		division_template = "Division d'Infanterie" 	# Second line, reserve equipment
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division= {	
+		name = "4ème Div. d'Inf. Coloniale"
+		location = 6766
+		division_template = "Division d'Infanterie" 	# Second line, reserve equipment
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+
+	# XVIIIe Corps d'Armée (Région Militaire in 1936) -- Bordeaux
+	division= {	
+		name = "36ème Division d'Infanterie"
+		location = 9737
+		division_template = "Division d'Infanterie" 	# Frontline, best equipment
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "1ère Div. d'Inf. Coloniale"
+		location = 6657
+		division_template = "Division d'Infanterie" 	# Second line, reserve equipment
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+
+	# XIVe Corps d'Armée (Région Militaire in 1936) -- Lyon
+	division= {	
+		name = "27ème Division d'Infanterie Alpine"
+		location = 778
+		division_template = "Division d'Infanterie Alpine" 	# Frontline, best equipment
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "30ème Division d'Infanterie Alpine"
+		location = 9745
+		division_template = "Division d'Infanterie Alpine" 	# Second line, reserve equipment
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	division= {	
+		name = "1ère Div. d'Inf. Nord-Africaine"
+		location = 3764
+		division_template = "Division d'Infanterie" 	# Second line, reserve equipment
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division= {	
+		name = "1ère Brigade de Chars de Combat"
+		location = 6613
+		division_template = "Brigade de Chars de Combat" 			# FT-17s
+		start_experience_factor = 0.2
+		force_equipment_variants = { gw_tank_equipment = { owner = "FRA" } }
+	}
+
+
+	# XVe Corps d'Armée (Région Militaire in 1936) -- Marseille
+	division= {	
+		name = "29ème Division d'Infanterie Alpine"
+		location = 6975
+		division_template = "Division d'Infanterie Alpine" 	# Frontline, best equipment
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "2ème Div. d'Inf. Coloniale"
+		location = 11834
+		division_template = "Division d'Infanterie" 	# Second line, reserve equipment
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+
+	# XVIe Corps d'Armée (Région Militaire in 1936) -- Montpellier
+	division= {	
+		name = "31ème Division d'Infanterie Alpine"
+		location = 9898
+		division_template = "Division d'Infanterie Alpine" 	# Frontline, best equipment
+		start_experience_factor = 0.3
+	}
+
+	# Division d'Inf. Forteresse -- Nice
+	division= {	
+		name = "Nice Div. d'Inf. de Forteresse"
+		location = 9909
+		division_template = "Brigade Coloniale" 	# Garrison unit, reserve equipment
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+
+	##### Commando Superiore Metropolitana #####
+	### Gruppo d'Armata Ovest ###
+	## 1a Armata ##
+	# II Corpo d'Armata #
+	division= {	
+		name = "4a Divisione di Fanteria 'Livorno'"
+		location = 11721
+		division_template = "Divisione di Fanteria"		# "Semi-Mountain" (less trained & equipped than Alpina)
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "4a Divisione di Fanteria 'Cuneense'"
+		location = 11721
+		division_template = "Divisione di Fanteria"
+		start_experience_factor = 0.3
+	}
+
+	# III Corpo d'Armata #
+	division= {	
+		name = "3a Divisione di Fanteria 'Ravenna'"
+		location = 11891
+		division_template = "Divisione di Fanteria"		# "Semi-Mountain" (less trained & equipped than Alpina)
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "6a Divisione di Fanteria 'Cuneo'"
+		location = 11891
+		division_template = "Divisione di Fanteria"		# "Semi-Mountain" (less trained & equipped than Alpina)
+		start_experience_factor = 0.3
+	}
+
+	# Subordinate to Army
+	division= {	
+		name = "1° Raggruppamento Celere"
+		location = 6788
+		division_template = "Raggruppamento Celere"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	
+	## 4a Armata ##
+	# Corpo d'Armata Alpina #
+	division= {	
+		name = "1a Divisione di Fanteria 'Taurinense'"
+		location = 9738
+		division_template = "Divisione di Fanteria"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "1a Divisione di Fanteria 'Taurinense'"
+		location = 9738
+		division_template = "Divisione di Fanteria"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "1a Divisione di Fanteria 'Taurinense'"
+		location = 9738
+		division_template = "Divisione di Fanteria"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "1a Divisione di Fanteria 'Taurinense'"
+		location = 9738
+		division_template = "Divisione di Fanteria"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "1a Divisione di Fanteria 'Taurinense'"
+		location = 9738
+		division_template = "Divisione di Fanteria"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "1a Divisione di Fanteria 'Taurinense'"
+		location = 9738
+		division_template = "Divisione di Fanteria"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "1a Divisione di Fanteria 'Taurinense'"
+		location = 9738
+		division_template = "Divisione di Fanteria"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "1a Divisione di Fanteria 'Taurinense'"
+		location = 9738
+		division_template = "Divisione di Fanteria"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "1a Divisione di Fanteria 'Taurinense'"
+		location = 9738
+		division_template = "Divisione di Fanteria"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "1a Divisione di Fanteria 'Taurinense'"
+		location = 9738
+		division_template = "Divisione di Fanteria"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "1a Divisione di Fanteria 'Taurinense'"
+		location = 9738
+		division_template = "Divisione di Fanteria"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "1a Divisione di Fanteria 'Taurinense'"
+		location = 9738
+		division_template = "Divisione di Fanteria"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "1a Divisione di Fanteria 'Taurinense'"
+		location = 9738
+		division_template = "Divisione di Fanteria"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "1a Divisione di Fanteria 'Taurinense'"
+		location = 9738
+		division_template = "Divisione di Fanteria"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "1a Divisione di Fanteria 'Taurinense'"
+		location = 9738
+		division_template = "Divisione di Fanteria"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "1a Divisione di Fanteria 'Taurinense'"
+		location = 9738
+		division_template = "Divisione di Fanteria"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "1a Divisione di Fanteria 'Taurinense'"
+		location = 9738
+		division_template = "Divisione di Fanteria"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "1a Divisione di Fanteria 'Taurinense'"
+		location = 9738
+		division_template = "Divisione di Fanteria"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "1a Divisione di Fanteria 'Taurinense'"
+		location = 9738
+		division_template = "Divisione di Fanteria"
+		start_experience_factor = 0.3
+	}
+	
+
+	# I Corpo d'Armata #
+	division= {	
+		name = "1a Divisione di Fanteria 'Superga'"
+		location = 6780
+		division_template = "Divisione di Fanteria"		# "Semi-Mountain" (less trained & equipped than Alpina)
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "2a Divisione di Fanteria 'Tridentina'"
+		location = 6780
+		division_template = "Divisione di Fanteria"
+		start_experience_factor = 0.3
+	}
+
+	# IV Corpo d'Armata #
+	division= {	
+		name = "2a Divisione di Fanteria 'Sforzesca'"
+		location = 611
+		division_template = "Divisione di Fanteria"		# "Semi-Mountain" (less trained & equipped than Alpina)
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "7a Divisione di Fanteria 'Lupi di Toscana'"
+		location = 611
+		division_template = "Divisione di Fanteria"	
+		start_experience_factor = 0.2
+	}
+	division= {	
+		name = "7a Divisione di Fanteria 'Lupi di Toscana'"
+		location = 611
+		division_template = "Divisione di Fanteria"	
+		start_experience_factor = 0.2
+	}
+	division= {	
+		name = "7a Divisione di Fanteria 'Lupi di Toscana'"
+		location = 611
+		division_template = "Divisione di Fanteria"	
+		start_experience_factor = 0.2
+	}
+	division= {	
+		name = "7a Divisione di Fanteria 'Lupi di Toscana'"
+		location = 611
+		division_template = "Divisione di Fanteria"	
+		start_experience_factor = 0.2
+	}
+	division= {	
+		name = "7a Divisione di Fanteria 'Lupi di Toscana'"
+		location = 611
+		division_template = "Divisione di Fanteria"	
+		start_experience_factor = 0.2
+	}
+	division= {	
+		name = "7a Divisione di Fanteria 'Lupi di Toscana'"
+		location = 611
+		division_template = "Divisione di Fanteria"	
+		start_experience_factor = 0.2
+	}
+	division= {	
+		name = "7a Divisione di Fanteria 'Lupi di Toscana'"
+		location = 611
+		division_template = "Divisione di Fanteria"	
+		start_experience_factor = 0.2
+}
+
+	### Gruppo d'Armata Est ###
+	## 2a Armata ##
+	# V Corpo d'Armata #
+	division= {	
+		name = "9a Divisione di Fanteria 'Pasubio'"
+		location = 11735
+		division_template = "Divisione di Fanteria"	
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+
+	# VI Corpo d'Armata #
+	division= {	
+		name = "8a Divisione di Fanteria 'Po'"
+		location = 628
+		division_template = "Divisione di Fanteria"	
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	division= {	
+		name = "3a Divisione di Fanteria 'Julia'"
+		location = 628
+		division_template = "Divisione di Fanteria"
+		start_experience_factor = 0.3
+	}
+
+	# Subordinate to Army
+	division= {	
+		name = "2° Raggruppamento Celere"
+		location = 6626
+		division_template = "Raggruppamento Celere"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+
+	## 6a Armata ##
+	# Corpo d'Armata Celere #
+	division= {	
+		name = "1a Divisione Celere 'Eugenio di Savoia'"
+		location = 11584
+		division_template = "Divisione Celere"	
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "2a Divisione Celere 'Emanuele Filiberto'"
+		location = 11584
+		division_template = "Divisione Celere"	
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "3a Divisione Celere 'Principe Amedeo'"
+		location = 11584
+		division_template = "Divisione Celere"	
+		start_experience_factor = 0.3
+	}
+
+	### Gruppo d'Armata Sud ###
+	# VII Corpo d'Armata #
+	division= {	
+		name = "20a Divisione di Fanteria 'Friuli'"
+		location = 4159
+		division_template = "Divisione di Fanteria"	
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	division= {	
+		name = "25a Divisione di Fanteria 'Bologna'"
+		location = 10074
+		division_template = "Divisione di Fanteria"	
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	division= {	
+		name = "7a Divisione di Fanteria 'Lupi di Toscana'"
+		location = 611
+		division_template = "Divisione di Fanteria"	
+		start_experience_factor = 0.2
+	}
+	division= {	
+		name = "7a Divisione di Fanteria 'Lupi di Toscana'"
+		location = 611
+		division_template = "Divisione di Fanteria"	
+		start_experience_factor = 0.2
+	}
+	division= {	
+		name = "7a Divisione di Fanteria 'Lupi di Toscana'"
+		location = 611
+		division_template = "Divisione di Fanteria"	
+		start_experience_factor = 0.2
+	}
+	division= {	
+		name = "7a Divisione di Fanteria 'Lupi di Toscana'"
+		location = 611
+		division_template = "Divisione di Fanteria"	
+		start_experience_factor = 0.2
+	}
+	division= {	
+		name = "7a Divisione di Fanteria 'Lupi di Toscana'"
+		location = 611
+		division_template = "Divisione di Fanteria"	
+		start_experience_factor = 0.2
+	}
+	division= {	
+		name = "7a Divisione di Fanteria 'Lupi di Toscana'"
+		location = 611
+		division_template = "Divisione di Fanteria"	
+		start_experience_factor = 0.2
+	}
+	division= {	
+		name = "7a Divisione di Fanteria 'Lupi di Toscana'"
+		location = 611
+		division_template = "Divisione di Fanteria"	
+		start_experience_factor = 0.2
+	}
+	division= {	
+		name = "7a Divisione di Fanteria 'Lupi di Toscana'"
+		location = 611
+		division_template = "Divisione di Fanteria"	
+		start_experience_factor = 0.2
+	}
+	division= {	
+		name = "7a Divisione di Fanteria 'Lupi di Toscana'"
+		location = 611
+		division_template = "Divisione di Fanteria"	
+		start_experience_factor = 0.2
+	}
+	division= {	
+		name = "7a Divisione di Fanteria 'Lupi di Toscana'"
+		location = 611
+		division_template = "Divisione di Fanteria"	
+		start_experience_factor = 0.2
+	}
+	division= {	
+		name = "7a Divisione di Fanteria 'Lupi di Toscana'"
+		location = 611
+		division_template = "Divisione di Fanteria"	
+		start_experience_factor = 0.2
+	}
+	division= {	
+		name = "7a Divisione di Fanteria 'Lupi di Toscana'"
+		location = 611
+		division_template = "Divisione di Fanteria"	
+		start_experience_factor = 0.2
+	}
+	division= {	
+		name = "7a Divisione di Fanteria 'Lupi di Toscana'"
+		location = 611
+		division_template = "Divisione di Fanteria"	
+		start_experience_factor = 0.2
+	}
+	division= {	
+		name = "7a Divisione di Fanteria 'Lupi di Toscana'"
+		location = 611
+		division_template = "Divisione di Fanteria"	
+		start_experience_factor = 0.2
+	}
+	division= {	
+		name = "7a Divisione di Fanteria 'Lupi di Toscana'"
+		location = 611
+		division_template = "Divisione di Fanteria"	
+		start_experience_factor = 0.2
+	}
+	division= {	
+		name = "7a Divisione di Fanteria 'Lupi di Toscana'"
+		location = 611
+		division_template = "Divisione di Fanteria"	
+		start_experience_factor = 0.2
+	}
+	division= {	
+		name = "7a Divisione di Fanteria 'Lupi di Toscana'"
+		location = 611
+		division_template = "Divisione di Fanteria"	
+		start_experience_factor = 0.2
+	}
+	division= {	
+		name = "7a Divisione di Fanteria 'Lupi di Toscana'"
+		location = 611
+		division_template = "Divisione di Fanteria"	
+		start_experience_factor = 0.2
+	}
+	division= {	
+		name = "7a Divisione di Fanteria 'Lupi di Toscana'"
+		location = 611
+		division_template = "Divisione di Fanteria"	
+		start_experience_factor = 0.2
+	}
+	division= {	
+		name = "7a Divisione di Fanteria 'Lupi di Toscana'"
+		location = 611
+		division_template = "Divisione di Fanteria"	
+		start_experience_factor = 0.2
+	}
+
+
+	##### NAVAL UNITS #####
+	### 1st FLEET ###
+			
+}
+
+### Air Wings ###
+air_wings = {
+	### 1a Squadra Aerea -- Milan/Turin
+	158 = { 
+		# 2a Divisione Aerea 'Borea'
+		fighter_equipment_0 = {
+			owner = "ITA" 
+			amount = 80
+		}
+		# 4a Divisione Aerea 'Drago'
+		# 6a Divisione Aerea 'Falco'
+		tac_bomber_equipment_0 =  {
+			owner = "ITA" 
+			amount = 128
+		}
+	}
+
+	### 2a Squadra Aerea -- Palermo
+	115 = {
+		# 1a Divisione Aerea 'Aquila'
+		fighter_equipment_0 = {
+			owner = "ITA" 
+			amount = 80
+		}
+		# 3a Divisione Aerea 'Centauro'
+		tac_bomber_equipment_0 =  {
+			owner = "ITA" 
+			amount = 32
+		}
+	}
+
+	### 3a Squadra Aerea -- Rome
+	2 = {
+		# 5a Divisione Aerea 'Eolo'
+		tac_bomber_equipment_0 =  {
+			owner = "ITA" 
+			amount = 64
+		}
+		# 8a Divisione Aerea 'Ibis'
+		fighter_equipment_0 = {
+			owner = "ITA" 
+			amount = 80
+		}
+	}
+
+	### 4a Squadra Aerea -- Bari
+	2 = {
+		# 9a Divisione Aerea 'Leone'
+		nav_bomber_equipment_1 = {
+			owner = "ITA" 
+			amount = 48
+		}
+	}
+
+	### Commando Aeronautica Sardegna -- Caligari
+	114 = {
+		# 10a Divisione Aerea 'Marte'
+		nav_bomber_equipment_1 = {
+			owner = "ITA" 
+			amount = 24
+		}
+	}
+
+	### Commando Aeronautica Libia -- Tripoli
+	16 = {
+		fighter_equipment_0 =  {
+			owner = "ITA" 
+			amount = 20
+		}
+		tac_bomber_equipment_0 =  {
+			owner = "ITA" 
+			amount = 32
+		}
+	}
+
+	### Commando Aeronautica Africa Orientale -- Eritrea
+	16 = {
+		fighter_equipment_0 =  {
+			owner = "ITA" 
+			amount = 40
+		}
+		tac_bomber_equipment_0 =  {
+			owner = "ITA" 
+			amount = 32
+		}
+		CAS_equipment_1 =  {
+			owner = "ITA" 
+			amount = 48
+		}
+	}
+}
+
+	
+	#########################
+	## STARTING PRODUCTION ##
+	#########################
+instant_effect = {
+
+		add_equipment_production = {
+			equipment = {
+				type = infantry_equipment_1
+				creator = "ITA"
+			}
+			requested_factories = 4
+			progress = 0.1
+			efficiency = 50
+		}
+
+		add_equipment_production = {
+			equipment = {
+				type = support_equipment_1
+				creator = "ITA" 
+			}
+			requested_factories = 1
+			progress = 0.3
+			efficiency = 50
+		}
+
+		add_equipment_production = {
+			equipment = {
+				type = light_tank_equipment_1
+				creator = "ITA" 
+			}
+			requested_factories = 1
+			progress = 0.4
+			efficiency = 50
+		}
+
+		add_equipment_production = {
+			equipment = {
+				type = motorized_equipment_1
+				creator = "ITA" 
+			}
+			requested_factories = 2
+			progress = 0.4
+			efficiency = 50
+		}
+
+		add_equipment_production = {
+			equipment = {
+				type = CAS_equipment_1
+				creator = "ITA" 
+			}
+			requested_factories = 1
+			progress = 0.2
+			efficiency = 50
+		}
+
+		### Under Contruction Notes ###
+		# BB: RM Conte di Cavour (BB_2: Caio Duilio Class) (Refit, Recomm. 1-Jun, 1937) 	
+		add_equipment_production = {
+			equipment = {
+				type = battleship_2
+				creator = "ITA" 
+			}
+			requested_factories = 1
+			progress = 0.20
+			amount = 1
+		}
+		# BB: RM Giulio Cesare (BB_2: Caio Duilio Class) (Refit, Recomm. 3-Jun, 1937)
+		add_equipment_production = {
+			equipment = {
+				type = battleship_2
+				creator = "ITA" 
+			}
+			requested_factories = 1
+			progress = 0.20
+			amount = 1
+		}
+		# CL: RM Eugenio di Savoia (Montecuccoli variant) (Comm. 16-Jan, 1936)
+		add_equipment_production = {
+			equipment = {
+				type = light_cruiser_1
+				creator = "ITA"
+				version_name = "Montecuccoli Class"
+			}
+			requested_factories = 1
+			progress = 0.95
+			amount = 1
+		}
+		# DD: Maestrale variant (x2) ("Perseo" "Sirio")
+		add_equipment_production = {
+			equipment = {
+				type = destroyer_1
+				creator = "ITA"
+				version_name = "Maestrale Class"
+			}
+			requested_factories = 2
+			progress = 0.70
+			amount = 2
+		}
+		# SS: Sirena variant (x1) ("Enrico Tazzoli")
+		add_equipment_production = {
+			equipment = {
+				type = submarine_1
+				creator = "ITA"
+				version_name = "Sirena Class"
+			}
+			requested_factories = 1
+			progress = 0.50
+			amount = 1
+		}
+	}
+
+}
+	#####################

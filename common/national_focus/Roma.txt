@@ -1,0 +1,348 @@
+focus_tree = {
+	id = Roma
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = ITA
+		}
+	}
+	default = no
+	
+#Nacionalismo
+	focus = {
+		id = Adriano_rome
+		icon = GFX_goal_imperialism
+		cost = 10,00
+		x = 14
+		y = 0
+
+		completion_reward = {
+			add_political_power = 10
+		add_popularity = {
+		ideology = imperialism
+		popularity = 0.9
+	}
+	add_ideas = bajo_ocio
+	add_timed_idea = {
+    idea = ocio_bajo_rendimiento
+    days = 180
+}
+	}
+}
+	focus = {
+		id = Escuela_militar_rome
+		icon = GFX_goal_anti_comintern_pact
+		cost = 15,00
+		x = 14
+		y = 2
+		prerequisite = {
+			focus = Adriano_rome
+	}
+	completion_reward = {
+	add_political_power = 100
+	add_ideas = Adriano
+}
+}
+	focus = {
+		id = emperador_rome
+		icon = GFX_goal_generic_national_unity
+		cost = 9,00
+		prerequisite = {
+		focus = Adriano_rome
+	}
+	x = 16
+	y = 2
+
+	completion_reward = {
+		add_command_power = 50
+	}
+}
+	focus = {
+		id = ocio1
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		cost = 12,00
+		prerequisite = {
+		focus = emperador_rome
+	}
+	prerequisite = {
+	focus = Escuela_militar_rome
+}
+	x = 14
+	y = 3
+	completion_reward = {
+		remove_ideas = bajo_ocio
+		add_ideas = normal_ocio
+		add_timed_idea = {
+    idea = ocio_normal_rendimiento
+    days = 180
+}
+		add_political_power = 100
+
+}
+}
+
+# Militar
+focus = {
+		id = Military_ROME
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 10,00
+		x = 3
+		y = 0
+			completion_reward = {
+					army_experience = 30
+				}
+
+	}
+	focus = {
+	id = alto_mando
+	icon = GFX_goal_generic_special_forces
+	cost = 20,00
+	x = 3
+	y = 1
+	prerequisite = {
+	focus = Military_ROME
+}
+	completion_reward = {
+	add_ideas = 
+}
+}	
+	focus = {
+		id = HISPANIA_ROME
+		icon = GFX_goal_generic_alliance
+		cost = 10,00
+		prerequisite = {
+			focus = alto_mando
+		}
+		x = 1
+		y = 3
+			completion_reward = {
+					add_political_power = 100
+				}
+
+	}
+	focus = {
+		id = POR_ROME
+		icon = GFX_goal_generic_major_war
+		cost = 10,00
+		prerequisite = {
+			focus = HISPANIA_ROME
+		}
+		x = 0
+		y = 4
+			completion_reward = {
+					create_wargoal = {
+							type = take_state_focus
+							target = POR
+							generator = { 28 }
+						}
+				}
+
+	}
+	focus = {
+		id = SPR_ROME
+		icon = GFX_goal_generic_major_war
+		cost = 10,00
+		prerequisite = {
+			focus = HISPANIA_ROME
+		}
+		x = 2
+		y = 4
+			completion_reward = {
+					SPR = {
+							country_event = {
+									id = spain.20
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = Britania_ROME
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10,00
+		prerequisite = {
+			focus = alto_mando
+		}
+		x = 4
+		y = 3
+			completion_reward = {
+			ENG = {
+							country_event = {
+									id = britania.1
+								}
+						}
+						}
+			available = {
+			country_exists = ENG
+			}
+			}
+
+	focus = {
+		id = SacroAnnex_ROME
+		icon = GFX_goal_generic_major_war
+		cost = 10,00
+		prerequisite = {
+			focus = Britania_ROME
+		}
+		x = 4
+		y = 4
+			completion_reward = {
+					GER = {
+							country_event = {
+									id = sacro.1
+								}
+						}
+				}
+			available = {
+			country_exists = GER
+
+	}
+	}
+	focus = {
+		id = KISannex_ROME
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		cost = 10,00
+		prerequisite = {
+			focus = alto_mando
+		}
+		x = 6
+		y = 3
+			completion_reward = {
+				create_wargoal = {
+					type = annex_everything
+					target = KIS
+					}
+				}
+
+	}
+	focus = {
+		id = Constantino_ROME
+		icon = GFX_goal_generic_special_forces
+		cost = 10,00
+		prerequisite = {
+			focus = KISannex_ROME
+		}
+		mutually_exclusive = {
+			focus = Allie_Constantino_ROME
+		}
+		x = 6
+		y = 4
+			completion_reward = {
+				create_wargoal = {
+					type = annex_everything
+					target = TUR
+					}
+				}
+
+	}
+	focus = {
+		id = ROME_Africa
+		icon = GFX_goal_anti_comintern_pact
+		cost = 10,00
+		prerequisite = {
+			focus = alto_mando
+		}
+		x = 3
+		y = 5
+		completion_reward = {
+              add_state_core = 458
+              add_state_core = 665
+set_autonomy = {
+    target = ALG
+    autonomy_state = autonomy_satellite
+    end_wars = no
+    end_civil_wars = no
+}
+set_autonomy = {
+    target = LBA
+    autonomy_state = autonomy_satellite
+    end_wars = no
+    end_civil_wars = no
+}
+ITA = { declare_war_on = {
+    target = TUN
+    type = take_core_state
+} }
+	}
+	# Politico
+	focus = {
+		id = Political_Rome
+		icon = GFX_goal_generic_demand_territory
+		cost = 10,00
+		x = 9
+		y = 0
+			completion_reward = {
+			add_political_power = 20
+			}
+
+	}
+	focus = {
+		id = republic_rome
+		icon = GFX_goal_generic_national_unity
+		cost = 10,00
+		prerequisite = {
+			focus = Political_Rome
+		}
+		ai_will_do = {
+			factor = 0.5
+		}
+		x = 8
+		y = 3
+			completion_reward = {
+					add_ideas = republic_focus			
+				}
+
+	}
+	focus = {
+		id = Allie_Constantino_ROME
+		icon = GFX_goal_generic_major_alliance
+		cost = 0,00
+		prerequisite = {
+			focus = republic_rome
+		}
+		mutually_exclusive = {
+			focus = Constantino_ROME
+		}
+		x = 8
+		y = 4
+
+	}
+	
+	focus = {
+		id = teocracia_rome
+		icon = GFX_goal_generic_military_sphere
+		cost = 10,00
+		prerequisite = {
+			focus = Political_Rome
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		x = 10
+		y = 3
+		completion_reward = { 
+			set_politics = {
+			ruling_party = teocracia
+			elections_allowed = no
+			teocracia = 50
+		}
+		}
+	}
+	focus = {
+	id = imperialismo_roma
+	icon = GFX_goal_anti_comintern_pact
+	cost = 5,0
+	prerequisite = {
+		focus = Adriano_rome
+}
+	prerequisite = {
+	focus = Political_Rome
+}
+ai_will_do = {
+			factor = 5		
+		}
+	x = 12
+	y = 2
+}
+}

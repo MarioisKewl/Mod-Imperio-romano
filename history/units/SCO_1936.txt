@@ -1,0 +1,67 @@
+division_template = {
+	name = "Blueskirt Division"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+		infantry = { x = 3 y = 0 }
+		infantry = { x = 3 y = 1 }
+	}
+}
+units = {
+	division= {	
+		name = "1st Blueskirt Division"
+		location = 9392 # Edinburgh
+		division_template = "Blueskirt Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+division= {	
+		name = "2nd Blueskirt Division"
+		location = 9392 # Edinburgh
+		division_template = "Blueskirt Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+division= {	
+		name = "3rd Blueskirt Division"
+		location = 9392 # Edinburgh
+		division_template = "Blueskirt Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+division= {	
+		name = "4th Blueskirt Division"
+		location = 9392 # Edinburgh
+		division_template = "Blueskirt Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+division= {	
+		name = "5th Blueskirt Division"
+		location = 9392 # Edinburgh
+		division_template = "Blueskirt Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+division= {	
+		name = "6th Blueskirt Division"
+		location = 9392 # Edinburgh
+		division_template = "Blueskirt Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+}

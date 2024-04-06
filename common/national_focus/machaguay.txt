@@ -1,0 +1,278 @@
+focus_tree = {
+	id = MACHAGUAY_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = MAY
+		}
+	}
+	default = no
+
+	focus = {
+		id = Military_MACHAGUAY
+		icon = GFX_goal_generic_small_arms
+		cost = 5,00
+		x = 4
+		y = 0
+			completion_reward = {
+					army_experience = 100
+                    add_manpower = 300000
+
+				}
+
+	}
+	focus = {
+		id = URUGUAY_MACHAGUAY
+		icon = GFX_goal_support_democracy
+		prerequisite = { focus = Military_MACHAGUAY}
+		cost = 10,00
+		x = 2
+		y = 1
+			completion_reward = {
+					create_wargoal = { type = annex_everything target = URG }
+
+				}
+
+	}
+
+	focus = {
+		id = PARAGUAY_MACHAGUAY
+		icon = GFX_goal_anti_comintern_pact
+		prerequisite = { focus = Military_MACHAGUAY}
+		cost = 10,00
+		x = 6
+		y = 1
+			completion_reward = {
+                    create_wargoal = { type = annex_everything target = PAR }
+
+				}
+        }
+
+focus = {
+		id = RECHAZAR_MALVINAS
+		icon = GFX_goal_anti_comintern_pact
+		prerequisite = { focus = MACHAGUAY_Unido}
+		cost = 1,00
+		x = 1
+		y = 4
+			completion_reward = {
+              ARG = {add_opinion_modifier = { target = MAC modifier = Reclamaciones_ilegitimas }}
+              add_state_core = 278
+				}	
+		}
+		
+focus = {
+        id = DESAFIAR_BRASILIA
+        icon = GFX_goal_anti_comintern_pact
+        prerequisite = { focus = MACHAGUAY_Unido}
+        cost = 1,00
+        x = 7
+        y = 4
+            completion_reward = {
+            BRA = {add_opinion_modifier = { target = MAC modifier = Reclamaciones_ilegitimas }}
+            add_state_core = 503 
+              }
+        }
+
+focus = {
+        id = INSTAURAR_ADMINISTRACION
+        icon = GFX_goal_anti_comintern_pact
+        prerequisite = { focus = MACHAGUAY_Unido}
+        cost = 1,00
+        x = 3
+        y = 4
+            completion_reward = {
+            add_state_core = 300
+            add_state_core = 301
+            add_state_core = 688 
+              }
+        }
+
+focus = {
+        id = CONSTRUIR_BUNKERS
+        icon = GFX_goal_anti_comintern_pact
+        prerequisite = { focus = MACHAGUAY_Unido}
+        cost = 1,00
+        x = 5
+        y = 4
+            completion_reward = {
+        510 = { add_building_construction = { type = bunker province = 8238 level = 2 instant_build = yes } }
+        510 = { add_building_construction = { type = bunker province = 10515 level = 2 instant_build = yes } }
+        510 = { add_building_construction = { type = bunker province = 7500 level = 2 instant_build = yes } }
+        510 = { add_building_construction = { type = bunker province = 8208 level = 2 instant_build = yes } }
+        510 = { add_building_construction = { type = bunker province = 10985 level = 2 instant_build = yes } }
+        510 = { add_building_construction = { type = bunker province = 10975 level = 2 instant_build = yes } }
+        510 = { add_building_construction = { type = bunker province = 13000 level = 2 instant_build = yes } }
+        510 = { add_building_construction = { type = bunker province = 2172 level = 2 instant_build = yes } }
+        510 = { add_building_construction = { type = bunker province = 8187	 level = 2 instant_build = yes } }
+        510 = { add_building_construction = { type = bunker province = 12964 level = 2 instant_build = yes } }
+        301 = { add_building_construction = { type = bunker province = 2173 level = 2 instant_build = yes } }
+        301 = { add_building_construction = { type = bunker province = 2152 level = 2 instant_build = yes } }
+        688 = { add_building_construction = { type = bunker province = 2209 level = 2 instant_build = yes } }
+        688 = { add_building_construction = { type = bunker province = 2195 level = 2 instant_build = yes } }
+        688 = { add_building_construction = { type = bunker province = 8203 level = 2 instant_build = yes } }
+        502 = { add_building_construction = { type = bunker province = 12396 level = 2 instant_build = yes } }
+        502 = { add_building_construction = { type = bunker province = 1542 level = 2 instant_build = yes } }
+        502 = { add_building_construction = { type = bunker province = 5110 level = 2 instant_build = yes } }
+        510 = { add_building_construction = { type = bunker province = 11007 level = 2 instant_build = yes } } 
+        301 = { add_building_construction = { type = bunker province = 2194 level = 2 instant_build = yes } }
+        301 = { add_building_construction = { type = bunker province = 12901 level = 2 instant_build = yes } }
+        301 = { add_building_construction = { type = bunker province = 11023 level = 2 instant_build = yes } } 
+        688 = { add_building_construction = { type = bunker province = 10973 level = 2 instant_build = yes } } 
+        688 = { add_building_construction = { type = bunker province = 5165 level = 2 instant_build = yes } } 
+              }
+        }            	
+
+focus = {
+        id = GUERRA_SUDAMERICANA
+        icon = GFX_goal_anti_comintern_pact
+        prerequisite = { focus = INSTAURAR_ADMINISTRACION}
+        prerequisite = { focus = CONSTRUIR_BUNKERS}
+        prerequisite = { focus = DESAFIAR_BRASILIA}
+        prerequisite = { focus = RECHAZAR_MALVINAS}
+        cost = 10,00
+        x = 4
+        y = 6
+            completion_reward = {
+	PRU = { create_faction = "Pacto de Cuzco"
+	add_to_faction = MAY }
+        BRA = { create_faction = "Pacto de Río"
+	add_to_faction = ARG 
+        add_to_faction = BOL 
+}
+BRA = { declare_war_on = {
+    target = MAY
+    type = take_core_state
+}
+              }
+BRA = { declare_war_on = {
+    target = PRU
+    type = take_core_state
+} }
+ARG = { add_to_war = {
+    targeted_alliance = BRA
+    enemy = MAY
+    hostility_reason = asked_to_join
+} }
+BOL = { add_to_war = {
+    targeted_alliance = BRA
+    enemy = MAY
+    hostility_reason = asked_to_join
+} }
+PRU = { add_to_war = {
+    targeted_alliance = MAY
+    enemy = BRA
+    hostility_reason = asked_to_join
+} }
+        }            				                        			                    				
+}
+
+	focus = {
+		id = MACHAGUAY_Unido
+		icon = GFX_goal_anschluss
+		prerequisite = { focus = URUGUAY_MACHAGUAY}
+		prerequisite = { focus = PARAGUAY_MACHAGUAY}
+		cost = 10,00
+		x = 4
+		y = 2
+		available = {
+		300 = { is_owned_and_controlled_by = MAY } #Uruguay
+        301 = { is_owned_and_controlled_by = MAY } #Paraguay
+        688 = { is_owned_and_controlled_by = MAY } #Chacoboreal
+        }
+			completion_reward = {
+              add_national_unity = 0.2
+              add_state_core = 300
+              add_state_core = 301	
+              add_state_core = 688
+              add_threat = 5
+              hidden_effect = {
+              news_event  = { id = news_335 }
+			}
+        }
+	}
+
+focus = {
+		id = MACHAGUAYARMAS
+		icon = GFX_goal_generic_small_arms
+		cost = 5,00
+		x = 16
+		y = 0
+			completion_reward = {
+					army_experience = 500
+
+				}
+
+	}
+
+focus = {
+		id = INDUSTRIASMILITARES
+		icon = GFX_goal_generic_small_arms
+		cost = 5,00
+		x = 19
+		y = 0
+			completion_reward = {
+					add_ideas = Industrias_Guay
+				}
+
+	}
+
+focus = {
+		id = INDUSTRIASM
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = MACHAGUAYARMAS	}
+		prerequisite = { focus = INDUSTRIASMILITARES}
+		cost = 5,00
+		x = 15
+		y = 2
+			completion_reward = {
+					add_ideas = FRA_infantry_focus
+				}
+
+	}	
+
+focus = {
+		id = FABRICASEXTRA
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = MACHAGUAYARMAS	}
+		prerequisite = { focus = INDUSTRIASMILITARES}
+		cost = 5,00
+		x = 18
+		y = 2
+
+			completion_reward = {
+			random_owned_controlled_state = {
+							limit = {
+									arms_factory > 0
+									free_building_slots = {
+											building = arms_factory
+											size > 1
+											include_locked = yes
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = arms_factory
+									level = 2
+									instant_build = yes
+								}
+						}
+			random_owned_controlled_state = {
+							limit = {
+									arms_factory > 0
+									free_building_slots = {
+											building = arms_factory
+											size > 1
+											include_locked = yes
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = arms_factory
+									level = 2
+									instant_build = yes
+								}					
+                        }
+                }
+        }                 

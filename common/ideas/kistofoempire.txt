@@ -1,0 +1,23 @@
+ideas = {
+
+	country = {
+        kis_god = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = catholiscism
+
+			removal_cost = -1
+			
+			modifier = {
+				planning_speed = 0.99
+			}
+		}
+    }
+}

@@ -1,0 +1,17 @@
+﻿division_template = {
+	name = "Guardia Suiza"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+	}
+}
+units = {
+	division= {	
+		name = "Guardia Suiza"
+		location = 11882 # Vatican City
+		division_template = "Guardia Suiza"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+
+	}
+}

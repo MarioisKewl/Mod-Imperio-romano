@@ -1,0 +1,5 @@
+KOS	= "countries/Kosovo.txt"
+KIS	= "countries/KistofoLandia.txt"
+MAY     = "countries/Machaguay.txt"
+CAT     = "countries/Cataluna.txt"
+VAT = "countries/vatican.txt"

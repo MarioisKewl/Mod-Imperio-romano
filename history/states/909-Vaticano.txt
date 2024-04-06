@@ -1,0 +1,21 @@
+state={
+	id=909
+	name="STATE_909"
+	manpower = 800
+	state_category = enclave
+	
+	history={
+		owner = VAT
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = VAT
+		add_core_of = PAP
+		victory_points = { 11882 35 }
+	}
+	provinces={
+		11882 
+	}
+
+	local_supplies = 0.000
+}

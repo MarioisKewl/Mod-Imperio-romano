@@ -1,0 +1,474 @@
+ideas = {
+
+	country = {
+
+	    Oposicion_evang = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = imperialismo
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_cost = 0.5
+                conscription_factor = -0.05
+			}
+		}
+
+		Oposicion_democra = {
+
+		allowed = {
+		        always = no
+		}
+
+		allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = imperialismo
+
+			removal_cost = -1
+			
+			modifier = {
+             stability_factor = -0.30
+             conscription_factor = -0.2
+			}
+		}
+      
+        Weak_novo = {
+
+		allowed = {
+		        always = no
+		}
+
+		allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = imperialismo
+
+			removal_cost = -1
+			
+			modifier = {
+             army_core_attack_factor = -0.2
+             army_core_defence_factor = -0.2
+             stability_factor = -0.30
+			}
+		}
+
+         Depression_Bra = {
+
+		allowed = {
+		        always = no
+		}
+
+		allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = imperialismo
+
+			removal_cost = -1
+			
+            picture = great_depression
+
+			modifier = {
+             consumer_goods_factor = 0.3
+             production_factory_max_efficiency_factor = -0.1
+             production_speed_buildings_factor = -0.15
+			}
+		}
+
+        Weak_novo2 = {
+
+		allowed = {
+		        always = no
+		}
+
+		allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = imperialismo
+
+			removal_cost = -1
+			
+			modifier = {
+             army_core_attack_factor = -0.2
+             army_core_defence_factor = -0.2
+             stability_factor = -0.25
+			}
+		}
+
+        Intervencion_Bra = {
+
+		allowed = {
+		        always = no
+		}
+
+		allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = imperialismo
+
+			removal_cost = -1
+			
+			modifier = {
+
+            consumer_goods_factor = -0.05
+			}
+		}
+
+        PVDE_Bra = {
+
+		allowed = {
+		        always = no
+		}
+
+		allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = imperialismo
+
+			removal_cost = -1
+			
+			modifier = {
+            subversive_activites_upkeep = -0.5
+			}
+		}
+
+        Weak_novo3 = {
+
+		allowed = {
+		        always = no
+		}
+
+		allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = imperialismo
+
+			removal_cost = -1
+			
+			modifier = {
+             army_core_attack_factor = -0.1
+             army_core_defence_factor = -0.1
+             stability_factor = -0.1
+			}
+		}
+
+    Depression_Bra2 = {
+
+		allowed = {
+		        always = no
+		}
+
+		allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = imperialismo
+
+			removal_cost = -1
+			
+            picture = great_depression
+
+			modifier = {
+             consumer_goods_factor = 0.2
+             production_factory_max_efficiency_factor = -0.1
+             production_speed_buildings_factor = -0.15
+			}
+		}
+    
+    Depression_Bra3 = {
+
+		allowed = {
+		        always = no
+		}
+
+		allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = imperialismo
+
+			removal_cost = -1
+			
+            picture = great_depression
+
+			modifier = {
+             consumer_goods_factor = 0.1
+             production_factory_max_efficiency_factor = -0.1
+             production_speed_buildings_factor = -0.15
+			}
+		}
+    
+    Depression_Bra4 = {
+
+		allowed = {
+		        always = no
+		}
+
+		allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+            picture = great_depression
+
+			modifier = {
+             consumer_goods_factor = 0.3
+			}
+		}
+    
+    Private_Bra = {
+
+		allowed = {
+		        always = no
+		}
+
+		allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = imperialismo
+
+			removal_cost = -1
+
+			modifier = {
+             production_factory_max_efficiency_factor = 0.1
+             line_change_production_efficiency_factor = 0.2
+			}
+		}
+
+    Deal_Bra = {
+
+		allowed = {
+		        always = no
+		}
+
+		allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = imperialismo
+
+			removal_cost = -1
+			
+            picture = great_depression
+
+			modifier = {            
+            production_factory_max_efficiency_factor = 0.1
+            production_speed_infrastructure_factor = 0.2
+			}
+		}
+
+    Bas_Bra = {
+
+		allowed = {
+		        always = no
+		}
+
+		allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+            picture = great_depression
+
+			modifier = {            
+            local_resources_factor = 0.05
+			}
+		}
+
+    Bas2_Bra = {
+
+		allowed = {
+		        always = no
+		}
+
+		allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+            picture = great_depression
+
+			modifier = {            
+            production_speed_buildings_factor = 0.05
+            local_resources_factor = 0.10
+			}
+		}
+
+        Estado_novo = {
+
+		allowed = {
+		        always = no
+		}
+
+		allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = imperialismo
+
+			removal_cost = -1
+			
+            rule = {
+				can_create_factions = yes
+			}
+
+			modifier = {            
+            army_core_attack_factor = 0.2
+            army_core_defence_factor = 0.2
+            stability_factor = 0.30
+            war_support_factor = 0.30
+            conscription = 0.02
+            mobilization_speed = 0.2
+            drift_defence_factor = 0.2
+			}
+		}
+        
+        Libmerr_Bra = {
+
+		allowed = {
+		        always = no
+		}
+
+		allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = imperialismo
+
+			removal_cost = -1
+
+			modifier = {            
+            trade_opinion_factor = 0.5
+            min_export = 0.05
+			}
+		}
+        
+        Privad_Bra = {
+
+		allowed = {
+		        always = no
+		}
+
+		allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = imperialismo
+
+			removal_cost = -1
+
+			modifier = {            
+            production_speed_buildings_factor = 0.05
+		    industrial_capacity_factory = 0.10
+			}
+		}
+
+        Liberal_Bra = {
+
+		allowed = {
+		        always = no
+		}
+
+		allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = imperialismo
+
+			removal_cost = -1
+            
+            rule = {
+				can_create_factions = yes
+			}
+
+			modifier = {            
+            stability_factor = 0.40
+            democratic_drift = 0.20
+            drift_defence_factor = 0.3
+			}
+		}
+        
+         Libernovo_Bra = {
+
+		allowed = {
+		        always = no
+		}
+
+		allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = imperialismo
+
+			removal_cost = -1
+
+			modifier = {            
+            army_core_attack_factor = -0.2
+            army_core_defence_factor = -0.2
+			}
+		}
+
+       Oposicion_reacc = {
+
+		allowed = {
+		        always = no
+		}
+
+		allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = imperialismo
+
+			removal_cost = -1
+
+			modifier = {            
+            stability_factor = -0.20
+			}
+		}
+
+        Interven_BRA = {
+
+		allowed = {
+		        always = no
+		}
+
+		allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = imperialismo
+
+			removal_cost = -1
+            
+			modifier = {            
+            send_volunteers_tension = -0.5
+            send_volunteer_divisions_required = -0.25
+            send_volunteer_size = 1
+			}
+		}
+
+
+	}	
+}
+
+	

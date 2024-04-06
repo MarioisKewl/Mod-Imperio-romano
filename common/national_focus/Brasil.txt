@@ -1,0 +1,863 @@
+focus_tree = {
+	id = Brasil
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = BRA
+		}
+	}
+	default = no
+focus = {
+		id = Politic_Bra
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 10,00
+		x = 12
+		y = 0
+			completion_reward = {
+			add_political_power = 150
+			BRA = { country_event = { id = brazil.1 } } 
+				}
+
+	}
+
+focus = {
+		id = Demo_Bra
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 10,00
+				bypass = {
+		has_country_flag = Sales_BRA
+		}
+		available = {
+				has_country_flag = Sales_BRA		
+		}
+		prerequisite = {
+			focus = Politic_Bra
+		}
+		mutually_exclusive = {
+			focus = Quo_Bra
+			focus = Yrion_Bra
+		}
+		x = 3
+		y = 1
+			completion_reward = {
+				}
+
+	}
+
+focus = {
+		id = Quo_Bra
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 10,00
+				bypass = {
+		has_country_flag = Vargas_BRA
+		}
+		available = {
+				has_country_flag = Vargas_BRA		
+		}
+		prerequisite = {
+			focus = Politic_Bra
+		}
+		mutually_exclusive = {
+			focus = Demo_Bra
+			focus = Yrion_Bra
+		}
+		x = 12
+		y = 1
+			completion_reward = {
+				}
+
+	}
+
+focus = {
+		id = Yrion_Bra
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 10,00
+				bypass = {
+		has_country_flag = Yrioon_BRA
+		}
+		available = {
+				has_country_flag = Yrioon_BRA		
+		}
+		prerequisite = {
+			focus = Politic_Bra
+		}
+		mutually_exclusive = {
+			focus = Demo_Bra
+			focus = Quo_Bra
+		}
+		x = 19
+		y = 1
+			completion_reward = {
+                }
+	}
+
+focus = {
+        id = Reafirmar_Bra
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 10,00
+		prerequisite = {
+			focus = Quo_Bra
+		}
+		x = 15
+		y = 2
+			completion_reward = {
+              swap_ideas = {
+         add_idea = Weak_novo2
+         remove_idea = Weak_novo
+         }
+
+       }
+   }
+
+focus = {
+        id = Economia_Bra
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 10,00
+		prerequisite = {
+			focus = Quo_Bra
+		}
+		x = 9
+		y = 2
+			completion_reward = {
+            add_ideas = Intervencion_Bra   
+       }
+   }
+
+    focus = {
+        id = Policia_Bra
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 10,00
+		prerequisite = {
+			focus = Reafirmar_Bra
+		}
+		x = 15
+		y = 3
+			completion_reward = {
+            add_ideas = PVDE_Bra   
+      }
+   }
+
+    focus = {
+        id = Matdemo_Bra
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 5,00
+		prerequisite = {
+			focus = Policia_Bra
+		}
+		x = 14
+		y = 4
+			completion_reward = {
+            remove_ideas = Oposicion_democra  
+            add_popularity = {
+    ideology = democratic
+    popularity = -0.1
+}
+      }
+   }
+
+    focus = {
+        id = Matyri_Bra
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 5,00
+		prerequisite = {
+			focus = Policia_Bra
+		}
+		x = 16
+		y = 4
+			completion_reward = {
+            remove_ideas = Oposicion_evang            
+            add_popularity = {
+    ideology = teocracia
+    popularity = -0.1
+}  
+kill_ideology_leader = teocracia
+      }
+   }
+
+    focus = {
+        id = LOL_Bra
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 10,00
+		prerequisite = { focus = Matdemo_Bra }
+		prerequisite = { focus = Matyri_Bra }
+		x = 15
+		y = 5
+			completion_reward = {
+            swap_ideas = {
+         add_idea = Weak_novo3
+         remove_idea = Weak_novo2
+      }
+   }
+ }
+
+   focus = {
+        id = LO_Bra
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 5,00
+		prerequisite = { focus = Economia_Bra }
+		x = 11
+		y = 3
+			completion_reward = {
+            swap_ideas = {
+         add_idea = Depression_Bra2
+         remove_idea = Depression_Bra
+      }
+     } 
+    }
+
+   focus = {
+        id = Viv_Bra
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 5,00
+		prerequisite = { focus = LO_Bra }
+		x = 11
+		y = 4
+			completion_reward = {
+            swap_ideas = {
+         add_idea = Depression_Bra3
+         remove_idea = Depression_Bra2
+     } 
+     }
+    }   
+
+    focus = {
+        id = Rec_Bra
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 10,00
+		prerequisite = { focus = Viv_Bra }
+		prerequisite = { focus = Inf_Bra }
+		x = 9
+		y = 5
+			completion_reward = { add_ideas = Deal_Bra
+         remove_ideas = Depression_Bra3 } 
+    }   
+
+    focus = {
+        id = Ind_Bra
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 5,00
+		prerequisite = { focus = Economia_Bra }
+		x = 7
+		y = 3
+			completion_reward = {           
+         add_ideas = Bas_Bra
+      }     
+  }
+   
+    focus = {
+        id = Inf_Bra
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 5,00
+		prerequisite = { focus = Ind_Bra }
+		x = 7
+		y = 4
+			completion_reward = {           
+         swap_ideas = {
+         add_idea = Bas2_Bra
+         remove_idea = Bas_Bra
+     } 
+      }     
+  }
+
+    focus = {
+        id = Nov_Bra
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 10,00
+		prerequisite = { focus = LOL_Bra }
+        prerequisite = { focus = Rec_Bra }
+		x = 12
+		y = 6
+			completion_reward = {           
+         swap_ideas = {
+         add_idea = Estado_novo
+         remove_idea = Weak_novo3
+     } 
+      }     
+  }
+    
+    focus = {
+        id = Libmer_Bra
+        icon = GFX_goal_generic_allies_build_infantry
+        cost = 10,00
+        prerequisite = { focus = Demo_Bra }
+        x = 4
+        y = 2
+            completion_reward = {
+         add_ideas = Libmerr_Bra  
+       }
+  }
+    
+    focus = {
+        id = Privado_Bra
+        icon = GFX_goal_generic_allies_build_infantry
+        cost = 10,00
+        prerequisite = { focus = Libmer_Bra } 
+        x = 4
+        y = 3
+            completion_reward = {
+         add_ideas = Privad_Bra
+       }
+    }
+    
+    focus = {
+        id = Funciona_Bra
+        icon = GFX_goal_generic_allies_build_infantry
+        cost = 10,00
+        prerequisite = { focus = Privado_Bra }
+        x = 4
+        y = 4
+            completion_reward = {
+         swap_ideas = { add_idea = Depression_Bra4 remove_idea = Depression_Bra }
+        }
+    }
+    
+    focus = {
+        id = Depris_Bra
+        icon = GFX_goal_generic_allies_build_infantry
+        cost = 10,00
+        prerequisite = { focus = Funciona_Bra }
+        x = 4
+        y = 5
+            completion_reward = {
+         remove_ideas = Depression_Bra4
+         add_ideas = Private_Bra
+        }
+    }
+    
+    focus = {
+        id = Civile_Bra
+        icon = GFX_goal_generic_allies_build_infantry
+        cost = 10,00
+        prerequisite = { focus = Demo_Bra }
+        x = 1
+        y = 2
+            completion_reward = {
+         add_popularity = { ideology = democratic popularity = 0.1 }
+        }
+    }
+    
+    focus = {
+        id = Reacc_Bra
+        icon = GFX_goal_generic_allies_build_infantry
+        cost = 10,00
+        prerequisite = { focus = Civile_Bra }
+        x = 0
+        y = 3
+            completion_reward = {
+         remove_ideas = Oposicion_reacc 
+        }
+    }
+    
+    focus = {
+        id = Compro_Bra
+        icon = GFX_goal_generic_allies_build_infantry
+        cost = 5,00
+        prerequisite = { focus = Civile_Bra }
+        x = 2
+        y = 3
+            completion_reward = {
+        remove_ideas = Oposicion_evang
+    }  }
+    
+    focus = {
+        id = Liberty_Bra
+        icon = GFX_goal_generic_allies_build_infantry
+        cost = 5,00
+        prerequisite = { focus = Reacc_Bra }
+        prerequisite = { focus = Compro_Bra }
+        x = 1
+        y = 4
+            completion_reward = {
+        swap_ideas = { add_idea = Libernovo_Bra remove_idea = Weak_novo }
+    } }
+
+     focus = {
+        id = Libertados_Bra
+        icon = GFX_goal_generic_allies_build_infantry
+        cost = 5,00
+        prerequisite = { focus = Liberty_Bra }
+        prerequisite = { focus = Depris_Bra }
+        x = 2
+        y = 6
+            completion_reward = {
+        swap_ideas = { add_idea = Liberal_Bra remove_idea = Libernovo_Bra }
+    } }
+
+    focus = {
+        id = Indus_Bra
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 5,00
+		available = { custom_trigger_tooltip = { tooltip = 5_BRA_tt NOT = { has_idea = Weak_novo has_idea = Weak_novo2 has_idea = Weak_novo3 has_idea = Libernovo_Bra } } }	
+		x = 26
+		y = 0
+			completion_reward = { 
+			random_owned_controlled_state = {
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						} 
+
+			random_owned_controlled_state = {
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}          			         
+      }     
+  }
+
+    focus = {
+        id = Indusrio_Bra
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 10,00
+		prerequisite = { focus = Indus_Bra }	
+		x = 26
+		y = 1
+			completion_reward = { 
+			500 = {
+							add_extra_state_shared_building_slots = 4
+							add_building_construction = {
+									type = industrial_complex
+									level = 4 
+									instant_build = yes
+								}
+						}          
+      }     
+  }
+
+    focus = {
+        id = Induscale_Bra
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 10,00
+		prerequisite = { focus = Indus_Bra }	
+		x = 24
+		y = 1
+			completion_reward = { 
+			501 = {
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2 
+									instant_build = yes
+								}
+						}
+
+			496 = {							
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2 
+									instant_build = yes
+								}
+						}          			          
+      }     
+  }
+
+    focus = {
+        id = Indusfor_Bra
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 10,00
+		prerequisite = { focus = Indus_Bra }	
+		x = 28
+		y = 1
+			completion_reward = { 
+			498 = {
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2 
+									instant_build = yes
+								}
+						} 
+			499 = {
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2 
+									instant_build = yes
+								}
+						}          			         
+      }     
+  }
+
+    focus = {
+        id = Indusinf_Bra
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 10,00
+		prerequisite = { focus = Indusrio_Bra }
+		prerequisite = { focus = Induscale_Bra }
+		prerequisite = { focus = Indusfor_Bra }		
+		x = 26
+		y = 2
+			completion_reward = { 
+			496 = {
+							add_building_construction = {
+									type = infrastructure
+									level = 3 
+									instant_build = yes
+								}
+						} 
+			498 = {
+							add_building_construction = {
+									type = infrastructure
+									level = 3 
+									instant_build = yes
+								}
+						}
+			499 = {
+							add_building_construction = {
+									type = infrastructure
+									level = 3 
+									instant_build = yes
+								}
+						}
+			500 = {
+							add_building_construction = {
+									type = infrastructure
+									level = 3 
+									instant_build = yes
+								}
+						}
+			501 = {
+							add_building_construction = {
+									type = infrastructure
+									level = 3 
+									instant_build = yes
+								}
+						}									          			         
+      }     
+  }
+
+    focus = {
+        id = Indusrar_Bra
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 10,00
+		prerequisite = { focus = Indusinf_Bra }	
+		x = 25
+		y = 3
+			completion_reward = { 
+		add_resource = {
+         type = rubber
+         amount = 11
+         state = 497
+              }
+         add_resource = {
+         type = rubber
+         amount = 78
+         state = 495
+              }
+         add_resource = {
+         type = aluminium
+         amount = 26
+         state = 495
+              }                               
+      }     
+  }
+
+    focus = {
+        id = Indusrer_Bra
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 10,00
+		prerequisite = { focus = Indusinf_Bra }	
+		x = 27
+		y = 3
+			completion_reward = { 
+			add_resource = {
+         type = steel
+         amount = 35
+         state = 496
+              }         
+      }     
+  }
+
+    focus = {
+        id = Fuera_Bra
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 10,00
+		available = { custom_trigger_tooltip = { 
+		tooltip = 5_BRA_tt
+		NOT = { has_idea = Weak_novo has_idea = Weak_novo2 has_idea = Weak_novo3 has_idea = Libernovo_Bra } } }	
+		x = 21
+		y = 6
+			completion_reward = { 
+            add_political_power = 150
+              }         
+      }      
+
+    focus = {
+        id = Usachevere_Bra
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 10,00
+		prerequisite = { focus = Fuera_Bra }	
+		x = 21
+		y = 7
+			completion_reward = { 
+            BRA = {add_opinion_modifier = { target = USA modifier = Usa_Bra }}
+            USA = {add_opinion_modifier = { target = BRA modifier = Usa_Bra }}
+              }         
+      }      
+
+    focus = {
+        id = Amazonico_Bra
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 10,00
+		prerequisite = { focus = Fuera_Bra }	
+		x = 17
+		y = 7
+			completion_reward = { 
+            add_state_core = 488
+            add_state_core = 486
+            add_state_core = 490
+            add_state_core = 491
+            add_state_core = 305
+            add_state_core = 494
+            add_state_core = 487
+            add_state_core = 687
+            add_state_core = 309
+            add_state_core = 310
+              }         
+      }      
+
+    focus = {
+        id = Amazonicoven_Bra
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 10,00
+		prerequisite = { focus = Amazonico_Bra }	
+		x = 14
+		y = 8
+			completion_reward = { 
+        VEN = { country_event = { id = brazil.2 days = 1 } }  
+              }         
+      }      
+
+    focus = {
+        id = Amazonicocol_Bra
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 10,00
+		prerequisite = { focus = Amazonico_Bra }	
+		x = 20
+		y = 8
+			completion_reward = { 
+        COL = { country_event = { id = brazil.5 days = 1 } }  
+              }         
+      }      
+
+    focus = {
+        id = Alianzaarg_Bra
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 10,00
+		prerequisite = { focus = Amazonico_Bra }	
+		x = 17
+		y = 8
+			completion_reward = { 
+        ARG = { country_event = { id = brazil.8 days = 1 } }  
+              }         
+      }      
+ 
+        focus = {
+        id = Matarperu_Bra
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 10,00
+		prerequisite = { focus = Amazonico_Bra }	
+		x = 15
+		y = 9
+			completion_reward = { 
+         declare_war_on = {
+    target = PRU
+    type = take_core_state
+} 
+              }         
+      }  
+
+
+        focus = {
+        id = Matarmacha_Bra
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 10,00
+		prerequisite = { focus = Amazonico_Bra }	
+		x = 19
+		y = 9
+			completion_reward = { 
+        declare_war_on = {
+    target = MAY
+    type = take_core_state
+}                               
+              }         
+      }  
+
+      focus = {
+        id = Amazonicobol_Bra
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 10,00
+		prerequisite = { focus = Amazonico_Bra }	
+		x = 21
+		y = 9
+			completion_reward = { 
+        BOL = { country_event = { id = brazil.11 days = 1 } }  
+              }         
+      }
+
+      focus = {
+        id = Amazonicopar_Bra
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 10,00
+		prerequisite = { focus = Amazonico_Bra }	
+		x = 13
+		y = 9
+			completion_reward = { 
+        PAR = { country_event = { id = brazil.14 days = 1 } }  
+              }         
+      }
+      
+       focus = {
+        id = Amazonicohol_Bra
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 10,00
+		prerequisite = { focus = Amazonico_Bra }	
+		x = 16
+		y = 10
+			completion_reward = { 
+        HOL = { country_event = { id = brazil.14 days = 1 } }  
+              }         
+      }
+
+        focus = {
+        id = Amazonicofra_Bra
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 10,00
+		prerequisite = { focus = Amazonico_Bra }	
+		x = 18
+		y = 10
+			completion_reward = { 
+        FRA = { country_event = { id = brazil.14 days = 1 } }  
+              }         
+      }
+
+      focus = {
+        id = Europa_Bra
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 10,00
+		prerequisite = { focus = Fuera_Bra }	
+		x = 25
+		y = 7
+			completion_reward = {
+            add_ideas = Interven_BRA 
+            }
+        }              
+    
+    focus = {
+        id = Allies_Bra
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 10,00
+		prerequisite = { focus = Europa_Bra }	
+		x = 25
+		y = 8
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					ENG = {
+						has_capitulated = yes
+					}
+					FRA = {
+						has_capitulated = yes
+					}
+				}
+			}
+		}
+
+		available = {
+			ENG = { is_faction_leader = yes }
+			is_in_faction = no
+			NOT = { has_war_with = ENG }
+			is_subject = no
+			NOT = {
+				any_other_country = {
+					is_in_faction_with = ENG
+					has_war_with = BRA
+				}
+			}
+		}
+			completion_reward = {
+            ENG = {	country_event = generic.2 }
+            }
+        }           
+    
+    focus = {
+        id = Axis_Bra
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 10,00
+		prerequisite = { focus = Europa_Bra }	
+		x = 28
+		y = 8
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				GER = {
+					has_capitulated = yes
+				}
+			}
+		}
+
+		available = {
+			GER = { 
+				is_faction_leader = yes
+			}
+			is_in_faction = no
+			NOT = { has_war_with = GER }
+			is_subject = no
+			NOT = {
+				any_other_country = {
+					is_in_faction_with = GER
+					has_war_with = BRA
+				}
+			}
+		}
+
+		bypass = {
+			is_in_faction_with = GER
+		}
+			completion_reward = {
+            GER = {	country_event = generic.2 }
+            }
+        }
+
+        focus = {
+		id = Army1_Bra
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 10,00
+		x = 40
+		y = 0
+			completion_reward = {
+			army_experience = 10
+				}
+
+	}   
+    
+    
+    focus = {
+	id = Army2_Bra
+	icon = GFX_goal_generic_allies_build_infantry
+    cost = 10,00
+    prerequisite = { focus = Army1_Bra }	
+    x = 38
+    y = 1
+    completion_reward = {
+	add_tech_bonus = {
+				name = infantry_weapons_bonus
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+			}   }  }   
+}
